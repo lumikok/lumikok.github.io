@@ -1,0 +1,34 @@
+{
+  "/contents/notes/": [
+    {
+      "text": "📚导航",
+      "link": "/contents/notes/"
+    },
+    {
+      "text": "c",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "第一章",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1",
+              "link": "/contents/notes/c/第一章/1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "/contents/essays/": [
+    {
+      "text": "✍️导航",
+      "link": "/contents/essays/"
+    },
+    {
+      "text": "home",
+      "link": "/contents/essays/home"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+/* 使用更适合屏幕阅读的版本 (推荐) */
+@font-face {
+  font-family: "LXGW WenKai Screen";
+  src: url("https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-screen/LXGWWenKaiScreen.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+/* 为中文内容设置字体 */
+:root:lang(zh) {
+  --vp-font-family-base:
+    "LXGW WenKai Screen", "SimSun", "宋体", "Songti SC", serif;
+  --vp-font-family-mono: monospace;
+}
+
+/* 1. 定义字体 (以 Alex Brush 为例，替换其他字体同理) */
+@font-face {
+  font-family: "Alex Brush";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alexbrush/v22/SZc83FzrJKuqFbwMKk6EtUL57UOm.woff2)
+    format("woff2");
+}
+
+/* 2. 应用字体：所有标题中文用霞鹜文楷，英文用选定的手写体 */
+h1,
+h2,
+h3 {
+  font-family: "Alex Brush", "LXGW WenKai Screen", "Times New Roman", cursive;
+}
