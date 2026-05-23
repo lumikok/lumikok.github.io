@@ -1,0 +1,33 @@
+﻿# 快速排序
+
+快速排序（Quick Sort）是一种高效的排序算法，采用分治法（Divide and Conquer）策略来对数据进行排序。  
+其基本思想是通过选择一个“基准”（pivot）元素，将数组划分为两部分，使得左侧部分的所有元素都小于基准元素，右侧部分的所有元素都大于基准元素，然后递归地对这两部分进行排序。
+
+## 代码实现
+
+```c
+void quicksort(int nums[],int left,int right) {
+    if(left>=right) return;
+        int i = left; // 小于基准的元素的最后一个位置
+        int j = right; // 大于基准的元素的第一个位置
+        while(i<j){
+            while(i<j && nums[j] >= nums[left]){
+                j--;
+            }
+            while(i<j && nums[i] <= nums[left]){
+                i++;
+            }
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
+        int tem = nums[left];
+        nums[left] = nums[i];
+        nums[i] = tem;
+
+        int pivot = i;
+        quicksort(nums,left,pivot-1);
+        quicksort(nums,pivot+1,right);
+    
+}
+```

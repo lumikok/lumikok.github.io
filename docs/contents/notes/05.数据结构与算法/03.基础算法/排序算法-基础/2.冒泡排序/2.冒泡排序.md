@@ -1,0 +1,61 @@
+﻿# 冒泡排序
+
+## 简单介绍
+
+冒泡排序（Bubble Sort）是一种简单的排序算法。通过连续地比较与交换相邻元素，将较大的元素逐渐“冒泡”到序列的末端，从而实现排序。
+
+## 算法流程
+
+1. 对n个元素进行n-1轮比较，将最大的元素移动到最后。
+2. 对剩下的n-1个元素进行n-2轮比较，将次大的元素移动到倒数第二个位置。
+3. 重复上述过程，可知共进行n-1轮比较，直到所有元素有序。
+
+## 代码实现
+
+```c
+#include <stdio.h>
+
+void Bubble_sort(int arr[],int size){
+    for(int i = size -1;i>0;i--){
+        for(int j=0;j<i;j++){
+            if(arr[j]>arr[j+1]){
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+}
+```
+
+## 优化
+
+可以发现，有些时候是不需要比较所有元素的，因此可以引入一个`flag`变量来检测在某一轮比较中是否发生了交换操作。如果没有发生交换，说明数组已经有序，可以提前结束排序。
+
+```c
+#include <stdio.h>
+
+#include <stdio.h>
+
+void Bubble_sort(int arr[],int size){
+    for (int i = size-1;i>0;i--){
+        int flag = 0;
+        for (int j = 0;j<i;j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                flag = 1;
+            }
+        }
+        if(!flag)
+            break;
+    }
+}
+```
+
+## 复杂度分析
+
+- 时间复杂度为O(n^2)，但优化后在最佳情况下为O(n)，为自适应排序算法。
+- 空间复杂度为O(1)，为原地排序算法。
+- 稳定排序算法。

@@ -1,0 +1,64 @@
+﻿# 分治优化搜索
+
+## 搜索算法分类
+
+搜索算法可以分为**两大类**：
+
+1. **暴力搜索**：通过遍历数据结构来实现，时间复杂度为 O(n) 或更高，适用于数据量较小的情况。
+2. **自适应搜索**：利用数据结构的特性来优化搜索过程，常见的有二分查找、哈希表等，时间复杂度通常为 O(log n) 或 O(1)。
+
+而自适应搜索通常可以通过**分治策略**来实现优化。
+
+## 分治优化搜索的基本思想
+
+分治优化搜索的基本思想是将大问题分解为若干个小问题，分别解决这些小问题，然后将结果合并起来。对于搜索问题，分治策略通常包括以下步骤：
+
+1. **分解**：将数据结构划分为若干个子结构。
+2. **解决**：在每个子结构中进行搜索。
+3. **合并**：将子结构的搜索结果进行合并，得到最终结果。
+
+## 常见的分治优化搜索算法
+
+### 1. 二分查找
+
+在前面我们用迭代实现了二分查找算法，当然也可以用递归的方式来实现：
+
+```c++
+// 递归实现二分查找
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int BinarySearch(vector<int>& nums,int target,int i,int j) {
+    if (i > j) {
+        return -1;
+    }
+
+    int mid = i + (j - i)/2;
+    if (nums[mid] > target) {
+        return BinarySearch(nums,target,i,mid - 1);
+    } else if (nums[mid] < target) {
+        return BinarySearch(nums,target,mid + 1,j);
+    } else {
+        return mid;
+    }
+}
+
+int BinarySearch(vector<int>& nums,int target) {
+    if (nums.empty()) return -1;
+
+    return BinarySearch(nums,target,0,nums.size() - 1);
+}
+
+int main()
+{
+    vector<int> nums;
+    for (int i = 0;i < 10;i++) {
+        nums.push_back(i+1);
+    }
+    int t = BinarySearch(nums,9);
+    cout << t << endl;
+    return 0;
+}
+```

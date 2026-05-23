@@ -1,0 +1,70 @@
+﻿# 二分查找边界
+
+这个其实和查找插入点很像，只不过我们要找的是**某个元素的边界位置**，即**第一个等于某个值的位置**或**最后一个等于某个值的位置**。
+
+## 代码实现
+
+下面以查找第一个等于某个值的位置为例，代码如下：
+
+```c
+#include <stdio.h>
+
+int binarySearchFirstEqual(int arr[], int size, int target){
+    int left = 0;
+    int right = size - 1;
+
+    while(left <= right){
+        int mid = left + (right - left) / 2;
+
+        if(arr[mid] >= target){
+            right = mid - 1; // 继续向左搜索
+        } else {
+            left = mid + 1;
+        }
+    }
+    return left;
+}
+```
+
+**很明显**，上面的代码和查找插入点的代码是一样的。
+
+## 查找右边界
+
+### 复用查找左边界
+
+```c
+int binarySearchLastEqual(int arr[], int size, int target){
+    int left = 0;
+    int right = size - 1;
+    int i = binarySearchInsertPosition(arr, size, target + 1);
+
+    int j = i - 1;
+    if(j == -1 || arr[j] != target){
+        return -1; // 未找到
+    }
+    return j;
+}
+```
+
+**注意**：此处复用了查找插入点的函数，其实查找左边界和查找插入点的代码是一样的。
+
+### 独立实现查找右边界
+
+```c
+int binarySearchLastEqual(int arr[], int size, int target){
+    int left = 0;
+    int right = size - 1;
+
+    while(left <= right){
+        int mid = left + (right - left) / 2;
+
+        if(arr[mid] > target){
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return right;
+}
+```
+

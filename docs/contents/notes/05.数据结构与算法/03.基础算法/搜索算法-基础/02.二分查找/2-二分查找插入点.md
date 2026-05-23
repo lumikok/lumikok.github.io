@@ -1,0 +1,71 @@
+﻿# 二分查找插入点
+
+二分查找不仅可以用来搜索目标元素，还可以用来确定一个元素在有序数组中的插入位置。
+
+**注意**：此处是插入点，并不意味着实际插入操作，只是返回该位置的索引。
+
+## 算法思路
+
+### 无重复元素
+
+对于一个有序且无重复元素的数组 `nums`，要插入一个目标值 `target`，可以使用二分查找来找到合适的插入位置。
+
+基于上一节的学习，此处只需要思考两种情况：
+
+1. 目标值 `target` 存在于数组中，那么直接返回其索引位置即可。
+2. 目标值 `target` 不存在于数组中，此时 `left` 指针最终会指向第一个大于 `target` 的元素位置，`right` 指针最终会指向最后一个小于 `target` 的元素位置。因此，插入位置即为 `left`。
+
+#### 代码实现
+
+**可知**：先搜索target（直接应用上一节的代码），若不存在则返回插入位置left（把未找到的返回值-1改为返回left即可）。
+
+```c
+# include <stdio.h>
+
+int searchInsert(int *array, int len, int target){
+    int left = 0;
+    int right = len - 1;
+    while(left <= right){
+        int mid = left + (right - left)/2;
+        if(array[mid] == target)
+            return mid;
+        else if(array[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+            //以上代码与二分查找目标相同
+    }
+    return left;//不存在目标，返回插入位置
+}
+```
+
+### 有重复元素
+
+此时需要找到第一个或者最后一个`target`的索引位置。下面以插入最左边为例：
+
+1. 继续使用二分查找，直到找到`target`。
+2. 然后，向左继续二分查找，直到找到第一个`target`的索引位置。
+3. 最后，返回找到的索引位置。
+
+总之，最后返回left.
+
+#### 实现代码
+
+```c
+#include <stdio.h>
+
+int searchInsert(int *array,int len,int target){
+    //定义左右指针
+    int left = 0;
+    int right = len - 1;
+    //实行二分查找
+    while(left <= right){
+        int mid = left + (right - left)/2;
+        if(array[mid] >= target)
+            right = mid - 1;
+        else
+            left = mid + 1;
+    }
+    return left;
+}
+```
