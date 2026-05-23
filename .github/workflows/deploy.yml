@@ -32,7 +32,6 @@ concurrency:
 jobs:
   # 构建任务
   build:
-
     runs-on: ubuntu-latest
 
     # node v20 运行
@@ -56,10 +55,10 @@ jobs:
 
       # 使用 最新的 PNPM
       # 你也可以指定为具体的版本
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
-          version: latest
+          version: 8
           # version: 9
           run_install: false
 
