@@ -5,20 +5,874 @@
       "link": "/contents/notes/"
     },
     {
-      "text": "c",
+      "text": "01.C语言",
       "collapsed": true,
       "items": [
         {
-          "text": "第一章",
+          "text": "assert",
+          "link": "/contents/notes/01.C语言/assert"
+        },
+        {
+          "text": "c calculate",
+          "link": "/contents/notes/01.C语言/c calculate"
+        },
+        {
+          "text": "c",
+          "link": "/contents/notes/01.C语言/c"
+        },
+        {
+          "text": "cbuchong",
+          "link": "/contents/notes/01.C语言/cbuchong"
+        },
+        {
+          "text": "sprintf",
+          "link": "/contents/notes/01.C语言/sprintf"
+        }
+      ]
+    },
+    {
+      "text": "02.Cpp",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "C++目录",
+          "link": "/contents/notes/02.Cpp/C++目录"
+        },
+        {
+          "text": "STL",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "容器",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.vector",
+                  "link": "/contents/notes/02.Cpp/STL/容器/1.vector"
+                },
+                {
+                  "text": "2.list",
+                  "link": "/contents/notes/02.Cpp/STL/容器/2.list"
+                },
+                {
+                  "text": "2.string",
+                  "link": "/contents/notes/02.Cpp/STL/容器/2.string"
+                }
+              ]
+            },
+            {
+              "text": "迭代器",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "迭代器",
+                  "link": "/contents/notes/02.Cpp/STL/迭代器/迭代器"
+                },
+                {
+                  "text": "迭代器部分常用",
+                  "link": "/contents/notes/02.Cpp/STL/迭代器/迭代器部分常用"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "从 C 转向 C++",
+          "link": "/contents/notes/02.Cpp/从 C 转向 C++"
+        },
+        {
+          "text": "动态内存",
           "collapsed": true,
           "items": [
             {
               "text": "1",
-              "link": "/contents/notes/c/第一章/1"
+              "link": "/contents/notes/02.Cpp/动态内存/1"
+            }
+          ]
+        },
+        {
+          "text": "基本语法",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "由C转向C++",
+              "link": "/contents/notes/02.Cpp/基本语法/由C转向C++"
+            }
+          ]
+        },
+        {
+          "text": "循环遍历",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "传统for循环",
+              "link": "/contents/notes/02.Cpp/循环遍历/传统for循环"
+            },
+            {
+              "text": "范围for循环",
+              "link": "/contents/notes/02.Cpp/循环遍历/范围for循环"
+            },
+            {
+              "text": "迭代器遍历",
+              "link": "/contents/notes/02.Cpp/循环遍历/迭代器遍历"
+            }
+          ]
+        },
+        {
+          "text": "面向对象",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "类与对象",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.类与对象初识",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/1.类与对象初识"
+                },
+                {
+                  "text": "2.类成员函数",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/2.类成员函数"
+                },
+                {
+                  "text": "3.类访问修饰符",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/3.类访问修饰符"
+                },
+                {
+                  "text": "4.构造函数与析构函数",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/4.构造函数与析构函数"
+                },
+                {
+                  "text": "5.拷贝构造函数",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/5.拷贝构造函数"
+                },
+                {
+                  "text": "6.友元函数",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/6.友元函数"
+                },
+                {
+                  "text": "7.内联函数",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/7.内联函数"
+                },
+                {
+                  "text": "8.this指针",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/8.this指针"
+                },
+                {
+                  "text": "9.指向类的指针",
+                  "link": "/contents/notes/02.Cpp/面向对象/类与对象/9.指向类的指针"
+                }
+              ]
+            },
+            {
+              "text": "重载",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "函数重载",
+                  "link": "/contents/notes/02.Cpp/面向对象/重载/函数重载"
+                },
+                {
+                  "text": "运算符重载",
+                  "link": "/contents/notes/02.Cpp/面向对象/重载/运算符重载"
+                }
+              ]
+            },
+            {
+              "text": "面向对象三大特性",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "多态",
+                  "link": "/contents/notes/02.Cpp/面向对象/面向对象三大特性/多态"
+                },
+                {
+                  "text": "封装",
+                  "link": "/contents/notes/02.Cpp/面向对象/面向对象三大特性/封装"
+                },
+                {
+                  "text": "继承",
+                  "link": "/contents/notes/02.Cpp/面向对象/面向对象三大特性/继承"
+                }
+              ]
             }
           ]
         }
       ]
+    },
+    {
+      "text": "03.Python",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "03_函数",
+          "link": "/contents/notes/03.Python/03_函数"
+        },
+        {
+          "text": "04_类型提示",
+          "link": "/contents/notes/03.Python/04_类型提示"
+        },
+        {
+          "text": "05_模块",
+          "link": "/contents/notes/03.Python/05_模块"
+        },
+        {
+          "text": "06_面向对象",
+          "link": "/contents/notes/03.Python/06_面向对象"
+        },
+        {
+          "text": "07_异常",
+          "link": "/contents/notes/03.Python/07_异常"
+        },
+        {
+          "text": "08_文件操作",
+          "link": "/contents/notes/03.Python/08_文件操作"
+        },
+        {
+          "text": "2_数据容器",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "01_list",
+              "link": "/contents/notes/03.Python/2_数据容器/01_list"
+            },
+            {
+              "text": "02_str",
+              "link": "/contents/notes/03.Python/2_数据容器/02_str"
+            },
+            {
+              "text": "03_tuple",
+              "link": "/contents/notes/03.Python/2_数据容器/03_tuple"
+            },
+            {
+              "text": "04_set",
+              "link": "/contents/notes/03.Python/2_数据容器/04_set"
+            },
+            {
+              "text": "05_dict",
+              "link": "/contents/notes/03.Python/2_数据容器/05_dict"
+            },
+            {
+              "text": "06_总结",
+              "link": "/contents/notes/03.Python/2_数据容器/06_总结"
+            }
+          ]
+        },
+        {
+          "text": "前言",
+          "link": "/contents/notes/03.Python/前言"
+        }
+      ]
+    },
+    {
+      "text": "04.FastAPI",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "2026-05-12",
+          "link": "/contents/notes/04.FastAPI/2026-05-12"
+        },
+        {
+          "text": "2026-05-13",
+          "link": "/contents/notes/04.FastAPI/2026-05-13"
+        },
+        {
+          "text": "2026-05-14",
+          "link": "/contents/notes/04.FastAPI/2026-05-14"
+        },
+        {
+          "text": "2026-05-16",
+          "link": "/contents/notes/04.FastAPI/2026-05-16"
+        },
+        {
+          "text": "2026-05-21",
+          "link": "/contents/notes/04.FastAPI/2026-05-21"
+        }
+      ]
+    },
+    {
+      "text": "05.数据结构与算法",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "01.复杂度分析",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "2.1 算法效率评估",
+              "link": "/contents/notes/05.数据结构与算法/01.复杂度分析/2.1 算法效率评估"
+            },
+            {
+              "text": "2.2 迭代与递归",
+              "link": "/contents/notes/05.数据结构与算法/01.复杂度分析/2.2 迭代与递归"
+            },
+            {
+              "text": "2.3 时间复杂度",
+              "link": "/contents/notes/05.数据结构与算法/01.复杂度分析/2.3 时间复杂度"
+            },
+            {
+              "text": "2.4 空间复杂度",
+              "link": "/contents/notes/05.数据结构与算法/01.复杂度分析/2.4 空间复杂度"
+            }
+          ]
+        },
+        {
+          "text": "02.数据结构",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1.前言",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.1 数据结构的分类",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/1.前言/1.1 数据结构的分类"
+                },
+                {
+                  "text": "补 1.数字编码",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/1.前言/补 1.数字编码"
+                },
+                {
+                  "text": "补 2.字符编码",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/1.前言/补 2.字符编码"
+                }
+              ]
+            },
+            {
+              "text": "10.图",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "图",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/10.图/图"
+                }
+              ]
+            },
+            {
+              "text": "2.数组",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "数组",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/2.数组/数组"
+                }
+              ]
+            },
+            {
+              "text": "3.链表",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "链表",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/3.链表/链表"
+                }
+              ]
+            },
+            {
+              "text": "4.列表",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "列表",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/4.列表/列表"
+                }
+              ]
+            },
+            {
+              "text": "5.栈",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "栈",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/5.栈/栈"
+                }
+              ]
+            },
+            {
+              "text": "6.队列",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "双向队列",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/6.队列/双向队列"
+                },
+                {
+                  "text": "队列",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/6.队列/队列"
+                }
+              ]
+            },
+            {
+              "text": "7.哈希表",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "哈希表",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/7.哈希表/哈希表"
+                }
+              ]
+            },
+            {
+              "text": "8.树",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "二叉树",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "二叉搜索树",
+                      "link": "/contents/notes/05.数据结构与算法/02.数据结构/8.树/二叉树/二叉搜索树"
+                    },
+                    {
+                      "text": "二叉树",
+                      "link": "/contents/notes/05.数据结构与算法/02.数据结构/8.树/二叉树/二叉树"
+                    },
+                    {
+                      "text": "二叉树数组表示",
+                      "link": "/contents/notes/05.数据结构与算法/02.数据结构/8.树/二叉树/二叉树数组表示"
+                    },
+                    {
+                      "text": "二叉树遍历",
+                      "link": "/contents/notes/05.数据结构与算法/02.数据结构/8.树/二叉树/二叉树遍历"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "9.堆",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "堆",
+                  "link": "/contents/notes/05.数据结构与算法/02.数据结构/9.堆/堆"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "03.基础算法",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "排序算法-基础",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.插入排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "3.插入排序",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/排序算法-基础/1.插入排序/3.插入排序"
+                    }
+                  ]
+                },
+                {
+                  "text": "2.冒泡排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "2.冒泡排序",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/排序算法-基础/2.冒泡排序/2.冒泡排序"
+                    }
+                  ]
+                },
+                {
+                  "text": "3.选择排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "1.选择排序",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/排序算法-基础/3.选择排序/1.选择排序"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "搜索算法-基础",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "01.线性与哈希优化",
+                  "link": "/contents/notes/05.数据结构与算法/03.基础算法/搜索算法-基础/01.线性与哈希优化"
+                },
+                {
+                  "text": "02.二分查找",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "1-二分查找",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/搜索算法-基础/02.二分查找/1-二分查找"
+                    },
+                    {
+                      "text": "2-二分查找插入点",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/搜索算法-基础/02.二分查找/2-二分查找插入点"
+                    },
+                    {
+                      "text": "3-二分查找边界",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/搜索算法-基础/02.二分查找/3-二分查找边界"
+                    }
+                  ]
+                },
+                {
+                  "text": "03.DFS",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "DFS",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/搜索算法-基础/03.DFS/DFS"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "数学-基础",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "6.高精度",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "高精度算法",
+                      "link": "/contents/notes/05.数据结构与算法/03.基础算法/数学-基础/6.高精度/高精度算法"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "04.进阶算法",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "排序算法-进阶",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "01.快速排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "4.快速排序",
+                      "link": "/contents/notes/05.数据结构与算法/04.进阶算法/排序算法-进阶/01.快速排序/4.快速排序"
+                    }
+                  ]
+                },
+                {
+                  "text": "02.归并排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "5.归并排序",
+                      "link": "/contents/notes/05.数据结构与算法/04.进阶算法/排序算法-进阶/02.归并排序/5.归并排序"
+                    }
+                  ]
+                },
+                {
+                  "text": "03.计数排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "6.计数排序",
+                      "link": "/contents/notes/05.数据结构与算法/04.进阶算法/排序算法-进阶/03.计数排序/6.计数排序"
+                    }
+                  ]
+                },
+                {
+                  "text": "04.基数排序",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "7.基数排序",
+                      "link": "/contents/notes/05.数据结构与算法/04.进阶算法/排序算法-进阶/04.基数排序/7.基数排序"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "05.优化技巧与思想",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1.分治",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.分治策略",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/1.分治/1.分治策略"
+                },
+                {
+                  "text": "2.汉诺塔",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "汉诺塔",
+                      "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/1.分治/2.汉诺塔/汉诺塔"
+                    }
+                  ]
+                },
+                {
+                  "text": "3.分治搜索策略",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "分治优化",
+                      "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/1.分治/3.分治搜索策略/分治优化"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "2.回溯",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "回溯算法",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/2.回溯/回溯算法"
+                }
+              ]
+            },
+            {
+              "text": "4.预处理技巧",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.前缀和",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/4.预处理技巧/1.前缀和"
+                },
+                {
+                  "text": "2.差分",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/4.预处理技巧/2.差分"
+                },
+                {
+                  "text": "3.前缀和与差分的联系",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/4.预处理技巧/3.前缀和与差分的联系"
+                }
+              ]
+            },
+            {
+              "text": "5.妙用指针",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "1.双指针",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/5.妙用指针/1.双指针"
+                },
+                {
+                  "text": "2.快慢指针",
+                  "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/5.妙用指针/2.快慢指针"
+                }
+              ]
+            },
+            {
+              "text": "6.滑动窗口",
+              "link": "/contents/notes/05.数据结构与算法/05.优化技巧与思想/6.滑动窗口"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "06.计算机基础",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "位运算",
+          "link": "/contents/notes/06.计算机基础/位运算"
+        },
+        {
+          "text": "各进制数表示方式",
+          "link": "/contents/notes/06.计算机基础/各进制数表示方式"
+        },
+        {
+          "text": "程序中的进制转换",
+          "link": "/contents/notes/06.计算机基础/程序中的进制转换"
+        },
+        {
+          "text": "进制转换",
+          "link": "/contents/notes/06.计算机基础/进制转换"
+        }
+      ]
+    },
+    {
+      "text": "07.Agent",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "大模型基础",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "01_大模型部署",
+              "link": "/contents/notes/07.Agent/大模型基础/01_大模型部署"
+            },
+            {
+              "text": "02_大模型调用",
+              "link": "/contents/notes/07.Agent/大模型基础/02_大模型调用"
+            },
+            {
+              "text": "03_提示词工程",
+              "link": "/contents/notes/07.Agent/大模型基础/03_提示词工程"
+            }
+          ]
+        },
+        {
+          "text": "琐记",
+          "link": "/contents/notes/07.Agent/琐记"
+        }
+      ]
+    },
+    {
+      "text": "08.前端",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "01_入门",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1.HTML入门",
+              "link": "/contents/notes/08.前端/01_入门/1.HTML入门"
+            },
+            {
+              "text": "2.CSS入门",
+              "link": "/contents/notes/08.前端/01_入门/2.CSS入门"
+            },
+            {
+              "text": "3.JS入门",
+              "link": "/contents/notes/08.前端/01_入门/3.JS入门"
+            }
+          ]
+        },
+        {
+          "text": "02_HTML",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "01_基本语法",
+              "link": "/contents/notes/08.前端/02_HTML/01_基本语法"
+            },
+            {
+              "text": "02_视频和音频",
+              "link": "/contents/notes/08.前端/02_HTML/02_视频和音频"
+            },
+            {
+              "text": "03_head",
+              "link": "/contents/notes/08.前端/02_HTML/03_head"
+            },
+            {
+              "text": "04_标题与段落",
+              "link": "/contents/notes/08.前端/02_HTML/04_标题与段落"
+            },
+            {
+              "text": "05_强调与着重强调",
+              "link": "/contents/notes/08.前端/02_HTML/05_强调与着重强调"
+            },
+            {
+              "text": "06_列表",
+              "link": "/contents/notes/08.前端/02_HTML/06_列表"
+            },
+            {
+              "text": "07_构建文档",
+              "link": "/contents/notes/08.前端/02_HTML/07_构建文档"
+            },
+            {
+              "text": "08_表单与按钮",
+              "link": "/contents/notes/08.前端/02_HTML/08_表单与按钮"
+            },
+            {
+              "text": "09_创建超链接",
+              "link": "/contents/notes/08.前端/02_HTML/09_创建超链接"
+            },
+            {
+              "text": "10_图片",
+              "link": "/contents/notes/08.前端/02_HTML/10_图片"
+            }
+          ]
+        },
+        {
+          "text": "03_CSS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1.层叠、优先级与继承",
+              "link": "/contents/notes/08.前端/03_CSS/1.层叠、优先级与继承"
+            },
+            {
+              "text": "2.选择器简述",
+              "link": "/contents/notes/08.前端/03_CSS/2.选择器简述"
+            },
+            {
+              "text": "3.属性选择器",
+              "link": "/contents/notes/08.前端/03_CSS/3.属性选择器"
+            },
+            {
+              "text": "4.伪类和伪元素",
+              "link": "/contents/notes/08.前端/03_CSS/4.伪类和伪元素"
+            },
+            {
+              "text": "5.关系选择器",
+              "link": "/contents/notes/08.前端/03_CSS/5.关系选择器"
+            },
+            {
+              "text": "6.盒模型",
+              "link": "/contents/notes/08.前端/03_CSS/6.盒模型"
+            },
+            {
+              "text": "7.边框",
+              "link": "/contents/notes/08.前端/03_CSS/7.边框"
+            },
+            {
+              "text": "8.基本文本和字体样式",
+              "link": "/contents/notes/08.前端/03_CSS/8.基本文本和字体样式"
+            }
+          ]
+        },
+        {
+          "text": "05_React",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "1.快速入门",
+              "link": "/contents/notes/08.前端/05_React/1.快速入门"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "99.工具杂项",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "01_markdown",
+          "link": "/contents/notes/99.工具杂项/01_markdown"
+        },
+        {
+          "text": "02_Git",
+          "link": "/contents/notes/99.工具杂项/02_Git"
+        },
+        {
+          "text": "03_blender",
+          "link": "/contents/notes/99.工具杂项/03_blender"
+        }
+      ]
+    },
+    {
+      "text": "streamlit",
+      "link": "/contents/notes/streamlit"
     }
   ],
   "/contents/essays/": [
@@ -27,8 +881,30 @@
       "link": "/contents/essays/"
     },
     {
+      "text": "2026-05-17",
+      "link": "/contents/essays/2026-05-17"
+    },
+    {
       "text": "home",
       "link": "/contents/essays/home"
+    },
+    {
+      "text": "学习日志",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "2026-5-20",
+          "link": "/contents/essays/学习日志/2026-5-20"
+        },
+        {
+          "text": "2026-5-21",
+          "link": "/contents/essays/学习日志/2026-5-21"
+        },
+        {
+          "text": "2026-5-22",
+          "link": "/contents/essays/学习日志/2026-5-22"
+        }
+      ]
     }
   ]
 }
