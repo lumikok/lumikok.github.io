@@ -3,3 +3,6 @@ dist
 cache
 .temp
 .DS_Store
+.obsidian/
+.claude/
+.claudian/
