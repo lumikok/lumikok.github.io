@@ -1,7 +1,7 @@
 {
   "/contents/notes/": [
     {
-      "text": "📚导航",
+      "text": "导航",
       "link": "/contents/notes/"
     },
     {
@@ -287,6 +287,14 @@
         {
           "text": "2026-05-21",
           "link": "/contents/notes/04.FastAPI/2026-05-21"
+        },
+        {
+          "text": "2026-05-23",
+          "link": "/contents/notes/04.FastAPI/2026-05-23"
+        },
+        {
+          "text": "2026-05-25",
+          "link": "/contents/notes/04.FastAPI/2026-05-25"
         }
       ]
     },
@@ -853,6 +861,16 @@
       ]
     },
     {
+      "text": "09.MySQL",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "基础",
+          "link": "/contents/notes/09.MySQL/基础"
+        }
+      ]
+    },
+    {
       "text": "99.工具杂项",
       "collapsed": true,
       "items": [
@@ -877,16 +895,12 @@
   ],
   "/contents/essays/": [
     {
-      "text": "✍️导航",
+      "text": "导航",
       "link": "/contents/essays/"
     },
     {
       "text": "2026-05-17",
       "link": "/contents/essays/2026-05-17"
-    },
-    {
-      "text": "home",
-      "link": "/contents/essays/home"
     },
     {
       "text": "学习日志",
@@ -903,6 +917,50 @@
         {
           "text": "2026-5-22",
           "link": "/contents/essays/学习日志/2026-5-22"
+        },
+        {
+          "text": "2026-5-23",
+          "link": "/contents/essays/学习日志/2026-5-23"
+        },
+        {
+          "text": "2026-5-25",
+          "link": "/contents/essays/学习日志/2026-5-25"
+        },
+        {
+          "text": "2026-5-26",
+          "link": "/contents/essays/学习日志/2026-5-26"
+        }
+      ]
+    }
+  ],
+  "/contents/problems/": [
+    {
+      "text": "导航",
+      "link": "/contents/problems/"
+    },
+    {
+      "text": "02_洛谷",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "BFS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "P1443-马的遍历",
+              "link": "/contents/problems/02_洛谷/BFS/P1443-马的遍历"
+            }
+          ]
+        },
+        {
+          "text": "DFS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "B3862-图的遍历",
+              "link": "/contents/problems/02_洛谷/DFS/B3862-图的遍历"
+            }
+          ]
         }
       ]
     }

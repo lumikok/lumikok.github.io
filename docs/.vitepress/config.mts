@@ -126,7 +126,8 @@ export default defineConfig({
           { text: "C语言", link: "/contents/notes/c/" },
         ],
       },
-      { text: "随笔", link: "/contents/essays/home.md" },
+      { text: "随笔", link: "/contents/essays/" },
+      { text: "刷题", link: "/contents/problems/" },
       { text: "关于我", link: "/about/" },
     ],
     socialLinks: [

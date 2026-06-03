@@ -17,7 +17,7 @@ const sidebarRules = [
     scanDir: path.join(docsRoot, "contents", "notes"), // 笔记实际目录
     basePath: "/contents/notes/", // URL 前缀
     topNav: {
-      text: "📚导航",
+      text: "导航",
       link: "/contents/notes/", // 指向 index.md 页面
     },
   },
@@ -26,8 +26,17 @@ const sidebarRules = [
     scanDir: path.join(docsRoot, "contents", "essays"), // 随笔实际目录
     basePath: "/contents/essays/",
     topNav: {
-      text: "✍️导航",
+      text: "导航",
       link: "/contents/essays/",
+    },
+  },
+  {
+    name: "problems",
+    scanDir: path.join(docsRoot, "contents", "problems"), // 题解实际目录
+    basePath: "/contents/problems/",
+    topNav: {
+      text: "导航",
+      link: "/contents/problems/",
     },
   },
   // 以后可以继续添加其他目录，如 '/projects/'
