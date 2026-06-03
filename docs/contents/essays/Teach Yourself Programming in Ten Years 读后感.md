@@ -1,3 +1,6 @@
+---
+date: 2026-05-17
+---
 # Teach Yourself Programming in Ten Years 读后感
 
 原文章链接： [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
