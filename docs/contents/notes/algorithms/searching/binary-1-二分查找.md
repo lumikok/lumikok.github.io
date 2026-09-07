@@ -1,0 +1,70 @@
+﻿# 二分查找
+
+二分查找（Binary Search）是一种基于分治思想的高效搜索算法，适用于有序的数据集合。每轮缩小一半搜索范围，直至找到目标元素或确定其不存在。
+
+## 算法步骤
+
+1. 确定搜索范围，设置左指针`left`和右指针`right`，初始时分别指向数组的起始和结束位置。
+2. 计算中间位置`mid = left + (right - left) // 2`。
+3. 比较中间元素`array[mid]`与目标值`target`：
+   - 如果`array[mid] == target`，则找到目标，返回`mid`。
+   - 如果`array[mid] < target`，则目标在右半部分，更新左指针`left = mid + 1`。
+   - 如果`array[mid] > target`，则目标在左半部分，更新右指针`right = mid - 1`。
+4. 重复步骤2和3，直到`left`超过`right`，表示目标不存在，返回-1。
+
+## 代码实现
+
+```c
+# include <stdio.h>
+
+int binartSearch(int *array, int len,int target){
+    int left = 0;
+    int right = len - 1;
+    while(left <= right){
+        int mid = left + (right - left)/2;
+        if(array[mid] == target)
+            return mid;
+        else if(array[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
+    }
+    return -1;
+}
+```
+
+## 时间复杂度
+
+二分查找的时间复杂度为O(log n)，因为每次比较后都将搜索范围缩小一半。
+
+## 空间复杂度
+
+二分查找的空间复杂度为O(1)，因为只使用了常数大小空间来存储指针和变量。
+
+## 区间的闭合与开合
+
+在二分查找中，区间的开闭影响了范围的定义：
+
+- **闭区间 [left, right]**：表示搜索范围包括`left`和`right`位置的元素。
+- **开区间 (left, right)**：表示搜索范围不包括`left`和`right`位置的元素。
+
+**但是值得注意，闭区间更为常用，因为它更直观且易于实现。**
+
+具体变化图示：
+
+![区间闭合与开合](https://www.hello-algo.com/chapter_searching/binary_search.assets/binary_search_ranges.png)
+
+## 优劣
+
+**优点**：
+
+- 高效：时间复杂度为O(log n)，适用于大规模有序数据。
+- 简单：实现逻辑清晰，易于理解。
+- 空间节省：空间复杂度为O(1)。
+
+**缺点**：
+
+- 适用范围有限：仅适用于有序数据集合。
+- 仅适用于数组。
+- 小数据集时，线性查找可能更快。
+

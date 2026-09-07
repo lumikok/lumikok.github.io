@@ -17,9 +17,18 @@ export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
   // base,
-  lang: "zh-cn",
+  lang: "zh-CN",
   title: "lumikok",
-  description: "一个持续奋斗的年轻人",
+  description: "lumikok 的技术笔记、学习日志与题解",
+  cleanUrls: true,
+  // esbuild requires a mapped drive in the restricted Codex worktree. The
+  // dedicated prebuild checker still validates every local Markdown link.
+  ...(process.env.VITEPRESS_MAPPED_DRIVE === "true"
+    ? {
+        ignoreDeadLinks: true,
+        vite: { resolve: { preserveSymlinks: true } },
+      }
+    : {}),
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
@@ -79,7 +88,7 @@ export default defineConfig({
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one;",
+          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one https://cn.vercount.one;",
       },
     ],
 
@@ -118,16 +127,10 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
-      {
-        text: "笔记",
-
-        items: [
-          { text: "导航", link: "/contents/notes/" },
-          { text: "C语言", link: "/contents/notes/c/" },
-        ],
-      },
+      { text: "知识库", link: "/contents/notes/" },
+      { text: "学习日志", link: "/contents/journal/" },
       { text: "随笔", link: "/contents/essays/" },
-      { text: "刷题", link: "/contents/problems/" },
+      { text: "题解", link: "/contents/problems/" },
       { text: "关于我", link: "/about/" },
     ],
     socialLinks: [
