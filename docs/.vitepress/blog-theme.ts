@@ -61,7 +61,7 @@ const blogTheme = getThemeConfig({
     copyright: "MIT License | lumikok © 2026",
     // message 字段支持配置为字符串或字符串数组，下面使用数组同时展示访问量和运行时间
     message:
-      '总访客数: <span id="vercount_value_site_uv">0</span> 人 &nbsp;|&nbsp; 网站已运行 <span id="site-runtime"></span>',
+      '总访客数: <span id="vercount_value_site_uv">加载中...</span> 人 &nbsp;|&nbsp; 网站已运行 <span id="site-runtime"></span>',
 
     // 文章页
     // icpRecord: {

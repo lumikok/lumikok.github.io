@@ -35,9 +35,9 @@ export default defineConfig({
     [
       "script",
       {
-        // VitePress head attributes expect string values
-        async: "true",
-        src: "https://cn.vercount.one/js",
+        // Defer execution until the SSR-rendered footer counter is in the DOM.
+        defer: "true",
+        src: "https://events.vercount.one/js",
       },
     ],
     [
@@ -88,7 +88,7 @@ export default defineConfig({
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one https://cn.vercount.one;",
+          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one https://cn.vercount.one https://events.vercount.one;",
       },
     ],
 

@@ -9,6 +9,12 @@
 
 /* 自定义首页背景图 */
 .VPHome::before {
-  background-image: url("/bg.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.68)), url("/bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.dark .VPHome::before {
+  background-image: linear-gradient(rgba(19, 21, 26, 0.58), rgba(19, 21, 26, 0.82)), url("/bg.webp");
 }
