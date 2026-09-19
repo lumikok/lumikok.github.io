@@ -1,31 +1,75 @@
-/* 使用更适合屏幕阅读的版本 (推荐) */
 @font-face {
   font-family: "LXGW WenKai Screen";
-  src: url("https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-screen/LXGWWenKaiScreen.ttf")
-    format("truetype");
+  src: url("https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-screen/LXGWWenKaiScreen.ttf") format("truetype");
   font-display: swap;
 }
 
-/* 为中文内容设置字体 */
-:root:lang(zh) {
-  --vp-font-family-base:
-    "LXGW WenKai Screen", "SimSun", "宋体", "Songti SC", serif;
-  --vp-font-family-mono: monospace;
+:root {
+  --vp-font-family-base: "LXGW WenKai Screen", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --vp-font-family-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --vp-c-brand-1: #1677a5;
+  --vp-c-brand-2: #0f638d;
+  --vp-c-brand-3: #0b506f;
+  --vp-c-brand-soft: rgba(22, 119, 165, 0.14);
+  --vp-layout-max-width: 1500px;
 }
 
-/* 1. 定义字体 (以 Alex Brush 为例，替换其他字体同理) */
-@font-face {
-  font-family: "Alex Brush";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/alexbrush/v22/SZc83FzrJKuqFbwMKk6EtUL57UOm.woff2)
-    format("woff2");
+.dark {
+  --vp-c-brand-1: #67c6ee;
+  --vp-c-brand-2: #43add8;
+  --vp-c-brand-3: #2694bf;
+  --vp-c-brand-soft: rgba(67, 173, 216, 0.16);
 }
 
-/* 2. 应用字体：所有标题中文用霞鹜文楷，英文用选定的手写体 */
-h1,
-h2,
-h3 {
-  font-family: "Alex Brush", "LXGW WenKai Screen", "Times New Roman", cursive;
+body { font-size: 16px; line-height: 1.75; }
+.VPDoc .container { max-width: 1440px; }
+.VPDoc.has-aside .content-container { max-width: 820px; }
+.vp-doc h1, .vp-doc h2, .vp-doc h3 { letter-spacing: -0.015em; line-height: 1.35; }
+.VPHome { background: radial-gradient(circle at 50% 0%, rgba(22, 119, 165, 0.16), transparent 44%); }
+.VPHome::before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.94)), url("/bg.webp");
+  background-size: cover;
+}
+.dark .VPHome::before {
+  background-image: linear-gradient(rgba(19, 21, 26, 0.82), rgba(19, 21, 26, 0.96)), url("/bg.webp");
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 40px;
+}
+.knowledge-card {
+  display: flex;
+  min-height: 144px;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 22px;
+  color: var(--vp-c-text-1) !important;
+  text-decoration: none !important;
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 88%, transparent);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.knowledge-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 12px 32px rgba(15, 99, 141, 0.12);
+  transform: translateY(-2px);
+}
+.knowledge-card strong { font-size: 1.2rem; }
+.knowledge-card span { color: var(--vp-c-text-2); }
+.knowledge-card__eyebrow {
+  color: var(--vp-c-brand-1) !important;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+.knowledge-grid--compact .knowledge-card { min-height: 112px; }
+
+@media (max-width: 680px) {
+  .knowledge-grid { grid-template-columns: 1fr; }
+  .knowledge-card { min-height: 112px; }
 }
