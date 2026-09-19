@@ -4,84 +4,245 @@ import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const docsRoot = path.join(projectRoot, "docs");
+const contentsRoot = path.join(docsRoot, "contents");
+const outputPath = path.join(docsRoot, ".vitepress", "sidebar.generated.json");
+const directoryMetaFile = "_sidebar.json";
 
-const sidebarRules = [
-  { name: "notes", text: "知识库", basePath: "/contents/notes/" },
-  { name: "journal", text: "学习日志", basePath: "/contents/journal/" },
-  { name: "essays", text: "随笔", basePath: "/contents/essays/" },
-  { name: "problems", text: "题解", basePath: "/contents/problems/" },
-];
-
-const directoryLabels = {
-  ai: "AI 与 Agent", agents: "大模型与 Agent", algorithms: "数据结构与算法",
-  c: "C 语言", cpp: "C++", python: "Python",
-  array: "数组", "binary-tree": "二叉树", graph: "图", "hash-table": "哈希表",
-  heap: "堆", "linked-list": "链表", list: "列表", queue: "队列", stack: "栈",
-  backend: "后端开发", basics: "基础语法", complexity: "复杂度分析",
-  "computer-fundamentals": "计算机基础", "data-structures": "数据结构",
-  databases: "数据库", desktop: "桌面开发", "divide-and-conquer": "分治",
-  foundations: "基础知识", "graph-theory": "图论", languages: "编程语言",
-  math: "数学基础", mysql: "MySQL", oop: "面向对象", pointers: "指针技巧",
-  preprocessing: "预处理", searching: "搜索", sorting: "排序", stl: "STL",
-  techniques: "算法思想与技巧", tools: "工具", web: "Web 前端",
-  fundamentals: "入门", html: "HTML", css: "CSS", react: "React",
-  plans: "计划与复盘",
-};
-
-const collator = new Intl.Collator("zh-CN", { numeric: true, sensitivity: "base" });
+const collator = new Intl.Collator("zh-CN", {
+  numeric: true,
+  sensitivity: "base",
+});
 
 function prettify(value) {
-  return directoryLabels[value] ?? value.replace(/^\d+[._-]?/, "").replace(/[-_]/g, " ");
+  return value
+    .replace(/^\d+[._-]+/, "")
+    .replace(/[-_]+/g, " ")
+    .trim();
 }
 
-function readTitle(filePath) {
+function unquote(value) {
+  const trimmed = value.trim();
+  const quote = trimmed[0];
+  if ((quote === '"' || quote === "'") && trimmed.at(-1) === quote) {
+    return trimmed.slice(1, -1);
+  }
+  return trimmed.replace(/\s+#.*$/, "").trim();
+}
+
+function readFrontmatter(source) {
+  const block = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s*\r?\n|$)/)?.[1];
+  if (!block) return {};
+
+  const result = {};
+  for (const key of ["title", "order", "sidebar", "draft"]) {
+    const value = block.match(new RegExp(`^${key}:\\s*(.*?)\\s*$`, "m"))?.[1];
+    if (value !== undefined) result[key] = unquote(value);
+  }
+  return result;
+}
+
+function readPage(filePath) {
   const source = fs.readFileSync(filePath, "utf8");
-  const frontmatter = source.match(/^---\s*[\r\n]+([\s\S]*?)[\r\n]+---/);
-  const title = frontmatter?.[1].match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1];
-  if (title) return title;
-  return source.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? prettify(path.basename(filePath, ".md"));
+  const frontmatter = readFrontmatter(source);
+  const heading = source.match(/^#\s+(.+)$/m)?.[1]?.trim();
+  const parsedOrder = Number(frontmatter.order);
+
+  return {
+    title:
+      frontmatter.title ||
+      heading ||
+      prettify(path.basename(filePath, path.extname(filePath))),
+    order: Number.isFinite(parsedOrder) ? parsedOrder : undefined,
+    hidden: frontmatter.sidebar === "false" || frontmatter.draft === "true",
+  };
+}
+
+function readDirectoryMeta(dir) {
+  const metaPath = path.join(dir, directoryMetaFile);
+  let meta = {};
+
+  if (fs.existsSync(metaPath)) {
+    try {
+      meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
+    } catch (error) {
+      throw new Error(
+        `Invalid ${path.relative(projectRoot, metaPath)}: ${error.message}`,
+      );
+    }
+  }
+
+  const indexPath = path.join(dir, "index.md");
+  const index = fs.existsSync(indexPath) ? readPage(indexPath) : undefined;
+  const parsedOrder = Number(meta.order ?? index?.order);
+
+  return {
+    title: meta.title || index?.title || prettify(path.basename(dir)),
+    order: Number.isFinite(parsedOrder) ? parsedOrder : undefined,
+    collapsed: meta.collapsed,
+    hidden: meta.hidden === true,
+    indexPath: index && !index.hidden ? indexPath : undefined,
+  };
 }
 
 function pageLink(filePath) {
-  return "/" + path.relative(docsRoot, filePath).replace(/\\/g, "/").replace(/\.md$/, "");
+  const relative = path.relative(docsRoot, filePath).replace(/\\/g, "/");
+  if (path.basename(relative).toLowerCase() === "index.md") {
+    const directory = path.posix.dirname(relative);
+    return directory === "." ? "/" : `/${directory}/`;
+  }
+  return `/${relative.replace(/\.md$/i, "")}`;
+}
+
+function compareEntries(a, b) {
+  const aOrder = a.order ?? Number.POSITIVE_INFINITY;
+  const bOrder = b.order ?? Number.POSITIVE_INFINITY;
+  if (aOrder !== bOrder) return aOrder - bOrder;
+  if (a.kind !== b.kind) return a.kind === "directory" ? -1 : 1;
+  return collator.compare(a.name, b.name);
+}
+
+function isIgnoredName(name) {
+  return name.startsWith(".") || name.startsWith("_");
 }
 
 function scanDirectory(dir, depth = 0) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => !entry.name.startsWith("_") && entry.name !== "index.md")
-    .sort((a, b) => {
-      if (a.isDirectory() !== b.isDirectory()) return a.isDirectory() ? -1 : 1;
-      return collator.compare(a.name, b.name);
-    });
+  const candidates = [];
 
-  return entries.flatMap((entry) => {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (isIgnoredName(entry.name) || entry.name.toLowerCase() === "index.md") {
+      continue;
+    }
+
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      const items = scanDirectory(fullPath, depth + 1);
-      if (!items.length) return [];
-      const group = { text: prettify(entry.name), collapsed: depth > 0, items };
-      const indexPath = path.join(fullPath, "index.md");
-      if (fs.existsSync(indexPath)) group.link = pageLink(indexPath);
-      return [group];
+      const meta = readDirectoryMeta(fullPath);
+      if (!meta.hidden) {
+        candidates.push({
+          kind: "directory",
+          name: entry.name,
+          fullPath,
+          meta,
+          order: meta.order,
+        });
+      }
+      continue;
     }
-    if (!entry.isFile() || !entry.name.endsWith(".md")) return [];
-    return [{ text: readTitle(fullPath), link: pageLink(fullPath) }];
+
+    if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) {
+      const page = readPage(fullPath);
+      if (!page.hidden) {
+        candidates.push({
+          kind: "page",
+          name: entry.name,
+          fullPath,
+          page,
+          order: page.order,
+        });
+      }
+    }
+  }
+
+  return candidates.sort(compareEntries).flatMap((candidate) => {
+    if (candidate.kind === "page") {
+      return [{ text: candidate.page.title, link: pageLink(candidate.fullPath) }];
+    }
+
+    const items = scanDirectory(candidate.fullPath, depth + 1);
+    if (!items.length && !candidate.meta.indexPath) return [];
+
+    const group = {
+      text: candidate.meta.title,
+      collapsed: candidate.meta.collapsed ?? depth > 0,
+      items,
+    };
+    if (candidate.meta.indexPath) group.link = pageLink(candidate.meta.indexPath);
+    return [group];
   });
 }
 
-const finalSidebar = {};
-for (const rule of sidebarRules) {
-  const scanDir = path.join(docsRoot, "contents", rule.name);
-  if (!fs.existsSync(scanDir)) {
-    console.warn(`Skip missing content section: ${rule.name}`);
-    continue;
-  }
-  finalSidebar[rule.basePath] = [
-    { text: rule.text, link: rule.basePath },
-    ...scanDirectory(scanDir),
-  ];
+function discoverSections() {
+  return fs
+    .readdirSync(contentsRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !isIgnoredName(entry.name))
+    .map((entry) => {
+      const fullPath = path.join(contentsRoot, entry.name);
+      const meta = readDirectoryMeta(fullPath);
+      return {
+        kind: "directory",
+        name: entry.name,
+        fullPath,
+        meta,
+        order: meta.order,
+      };
+    })
+    .filter((section) => !section.meta.hidden)
+    .sort(compareEntries);
 }
 
-const outputPath = path.join(docsRoot, ".vitepress", "sidebar.generated.json");
-fs.writeFileSync(outputPath, `${JSON.stringify(finalSidebar, null, 2)}\n`);
-console.log(`Generated ${Object.keys(finalSidebar).length} sidebars: ${outputPath}`);
+export function generateSidebar() {
+  if (!fs.existsSync(contentsRoot)) {
+    throw new Error(`Missing content directory: ${contentsRoot}`);
+  }
+
+  const sidebar = {};
+  for (const section of discoverSections()) {
+    const items = scanDirectory(section.fullPath);
+    if (!items.length && !section.meta.indexPath) continue;
+
+    const basePath = pageLink(path.join(section.fullPath, "index.md"));
+    sidebar[basePath] = [
+      {
+        text: section.meta.title,
+        ...(section.meta.indexPath ? { link: basePath } : {}),
+      },
+      ...items,
+    ];
+  }
+
+  const output = `${JSON.stringify(sidebar, null, 2)}\n`;
+  const previous = fs.existsSync(outputPath)
+    ? fs.readFileSync(outputPath, "utf8")
+    : undefined;
+  if (output !== previous) fs.writeFileSync(outputPath, output);
+
+  console.log(
+    `Generated ${Object.keys(sidebar).length} sidebars from docs/contents: ${outputPath}`,
+  );
+  return sidebar;
+}
+
+export function sidebarWatcherPlugin() {
+  return {
+    name: "local-auto-sidebar",
+    configureServer(server) {
+      let timer;
+      const onChange = (event, filePath) => {
+        const absolutePath = path.resolve(filePath);
+        const isContent = absolutePath.startsWith(`${contentsRoot}${path.sep}`);
+        const isRelevant =
+          event === "addDir" ||
+          event === "unlinkDir" ||
+          filePath.toLowerCase().endsWith(".md") ||
+          path.basename(filePath) === directoryMetaFile;
+
+        if (!isContent || !isRelevant) return;
+        clearTimeout(timer);
+        timer = setTimeout(async () => {
+          generateSidebar();
+          await server.restart();
+        }, 100);
+      };
+
+      server.watcher.on("all", onChange);
+      return () => {
+        clearTimeout(timer);
+        server.watcher.off("all", onChange);
+      };
+    },
+  };
+}
+
+const isMain =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) generateSidebar();

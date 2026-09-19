@@ -1,4 +1,88 @@
 {
+  "/contents/essays/": [
+    {
+      "text": "随笔",
+      "link": "/contents/essays/"
+    },
+    {
+      "text": "Teach Yourself Programming in Ten Years 读后感",
+      "link": "/contents/essays/Teach Yourself Programming in Ten Years 读后感"
+    }
+  ],
+  "/contents/journal/": [
+    {
+      "text": "学习日志",
+      "link": "/contents/journal/"
+    },
+    {
+      "text": "2026",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "第一步",
+          "link": "/contents/journal/2026/2026-05-12-fastapi"
+        },
+        {
+          "text": "请求体",
+          "link": "/contents/journal/2026/2026-05-13-fastapi"
+        },
+        {
+          "text": "查询参数和字符串校验",
+          "link": "/contents/journal/2026/2026-05-16-fastapi"
+        },
+        {
+          "text": "请求体",
+          "link": "/contents/journal/2026/2026-05-21-fastapi"
+        },
+        {
+          "text": "声明请求示例数据",
+          "link": "/contents/journal/2026/2026-05-23-fastapi"
+        },
+        {
+          "text": "Cookie 参数模型",
+          "link": "/contents/journal/2026/2026-05-25-fastapi"
+        },
+        {
+          "text": "依赖注入",
+          "link": "/contents/journal/2026/2026-06-18-fastapi"
+        },
+        {
+          "text": "今日学习笔记",
+          "link": "/contents/journal/2026/2026-07-10-qt"
+        },
+        {
+          "text": "错误处理",
+          "link": "/contents/journal/2026/2026-07-11-fastapi"
+        },
+        {
+          "text": "今日学习笔记",
+          "link": "/contents/journal/2026/2026-07-11-qt"
+        },
+        {
+          "text": "路径操作配置",
+          "link": "/contents/journal/2026/2026-07-18-fastapi"
+        },
+        {
+          "text": "异步",
+          "link": "/contents/journal/2026/2026-07-19-fastapi"
+        }
+      ]
+    },
+    {
+      "text": "计划与复盘",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "学期学习总结",
+          "link": "/contents/journal/plans/警告"
+        },
+        {
+          "text": "学习计划",
+          "link": "/contents/journal/plans/学习计划"
+        }
+      ]
+    }
+  ],
   "/contents/notes/": [
     {
       "text": "知识库",
@@ -213,20 +297,20 @@
           "collapsed": true,
           "items": [
             {
+              "text": "二分查找",
+              "link": "/contents/notes/algorithms/searching/1.二分查找"
+            },
+            {
               "text": "线性查找",
               "link": "/contents/notes/algorithms/searching/01.线性与哈希优化"
             },
             {
-              "text": "include <stdio.h>",
-              "link": "/contents/notes/algorithms/searching/binary-1-二分查找"
+              "text": "二分查找插入点",
+              "link": "/contents/notes/algorithms/searching/2.二分查找插入点"
             },
             {
-              "text": "include <stdio.h>",
-              "link": "/contents/notes/algorithms/searching/binary-2-二分查找插入点"
-            },
-            {
-              "text": "binary 3 二分查找边界",
-              "link": "/contents/notes/algorithms/searching/binary-3-二分查找边界"
+              "text": "二分查找边界",
+              "link": "/contents/notes/algorithms/searching/3.二分查找边界"
             },
             {
               "text": "DFS",
@@ -239,32 +323,32 @@
           "collapsed": true,
           "items": [
             {
-              "text": "bubble 2.冒泡排序",
-              "link": "/contents/notes/algorithms/sorting/bubble-2.冒泡排序"
+              "text": "选择排序",
+              "link": "/contents/notes/algorithms/sorting/1.选择排序"
             },
             {
-              "text": "counting 6.计数排序",
-              "link": "/contents/notes/algorithms/sorting/counting-6.计数排序"
+              "text": "冒泡排序",
+              "link": "/contents/notes/algorithms/sorting/2.冒泡排序"
             },
             {
               "text": "插入排序",
-              "link": "/contents/notes/algorithms/sorting/insertion-3.插入排序"
+              "link": "/contents/notes/algorithms/sorting/3.插入排序"
             },
             {
-              "text": "merge 5.归并排序",
-              "link": "/contents/notes/algorithms/sorting/merge-5.归并排序"
+              "text": "快速排序",
+              "link": "/contents/notes/algorithms/sorting/4.快速排序"
             },
             {
-              "text": "quick 4.快速排序",
-              "link": "/contents/notes/algorithms/sorting/quick-4.快速排序"
+              "text": "归并排序",
+              "link": "/contents/notes/algorithms/sorting/5.归并排序"
             },
             {
-              "text": "radix 7.基数排序",
-              "link": "/contents/notes/algorithms/sorting/radix-7.基数排序"
+              "text": "计数排序",
+              "link": "/contents/notes/algorithms/sorting/6.计数排序"
             },
             {
-              "text": "选择排序",
-              "link": "/contents/notes/algorithms/sorting/selection-1.选择排序"
+              "text": "基数排序",
+              "link": "/contents/notes/algorithms/sorting/7.基数排序"
             }
           ]
         },
@@ -281,12 +365,12 @@
                   "link": "/contents/notes/algorithms/techniques/divide-and-conquer/1.分治策略"
                 },
                 {
-                  "text": "hanoi 汉诺塔",
-                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/hanoi-汉诺塔"
+                  "text": "分治优化搜索",
+                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/分治优化"
                 },
                 {
-                  "text": "search 分治优化",
-                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/search-分治优化"
+                  "text": "汉诺塔问题",
+                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/汉诺塔"
                 }
               ]
             },
@@ -397,7 +481,7 @@
       "collapsed": false,
       "items": [
         {
-          "text": "C 语言",
+          "text": "C语言",
           "collapsed": true,
           "items": [
             {
@@ -421,7 +505,7 @@
               "link": "/contents/notes/languages/c/sprintf"
             }
           ],
-          "link": "/contents/notes/languages/c/index"
+          "link": "/contents/notes/languages/c/"
         },
         {
           "text": "C++",
@@ -754,105 +838,21 @@
       ]
     }
   ],
-  "/contents/journal/": [
-    {
-      "text": "学习日志",
-      "link": "/contents/journal/"
-    },
-    {
-      "text": "",
-      "collapsed": false,
-      "items": [
-        {
-          "text": "第一步",
-          "link": "/contents/journal/2026/2026-05-12-fastapi"
-        },
-        {
-          "text": "请求体",
-          "link": "/contents/journal/2026/2026-05-13-fastapi"
-        },
-        {
-          "text": "查询参数和字符串校验",
-          "link": "/contents/journal/2026/2026-05-16-fastapi"
-        },
-        {
-          "text": "请求体",
-          "link": "/contents/journal/2026/2026-05-21-fastapi"
-        },
-        {
-          "text": "声明请求示例数据",
-          "link": "/contents/journal/2026/2026-05-23-fastapi"
-        },
-        {
-          "text": "Cookie 参数模型",
-          "link": "/contents/journal/2026/2026-05-25-fastapi"
-        },
-        {
-          "text": "依赖注入",
-          "link": "/contents/journal/2026/2026-06-18-fastapi"
-        },
-        {
-          "text": "今日学习笔记",
-          "link": "/contents/journal/2026/2026-07-10-qt"
-        },
-        {
-          "text": "错误处理",
-          "link": "/contents/journal/2026/2026-07-11-fastapi"
-        },
-        {
-          "text": "今日学习笔记",
-          "link": "/contents/journal/2026/2026-07-11-qt"
-        },
-        {
-          "text": "路径操作配置",
-          "link": "/contents/journal/2026/2026-07-18-fastapi"
-        },
-        {
-          "text": "异步",
-          "link": "/contents/journal/2026/2026-07-19-fastapi"
-        }
-      ]
-    },
-    {
-      "text": "计划与复盘",
-      "collapsed": false,
-      "items": [
-        {
-          "text": "学期学习总结",
-          "link": "/contents/journal/plans/警告"
-        },
-        {
-          "text": "学习计划",
-          "link": "/contents/journal/plans/学习计划"
-        }
-      ]
-    }
-  ],
-  "/contents/essays/": [
-    {
-      "text": "随笔",
-      "link": "/contents/essays/"
-    },
-    {
-      "text": "Teach Yourself Programming in Ten Years 读后感",
-      "link": "/contents/essays/Teach Yourself Programming in Ten Years 读后感"
-    }
-  ],
   "/contents/problems/": [
     {
       "text": "题解",
       "link": "/contents/problems/"
     },
     {
-      "text": "BFS",
+      "text": "广度优先搜索",
       "link": "/contents/problems/bfs"
     },
     {
-      "text": "binary search",
+      "text": "二分查找",
       "link": "/contents/problems/binary-search"
     },
     {
-      "text": "DFS",
+      "text": "深度优先搜索",
       "link": "/contents/problems/dfs"
     },
     {

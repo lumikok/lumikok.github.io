@@ -1,8 +1,13 @@
 import { defineConfig } from "vitepress";
 
-import generatedSidebar from "./sidebar.generated.json" with { type: "json" };
+import {
+  generateSidebar,
+  sidebarWatcherPlugin,
+} from "../../scripts/generateSidebar.js";
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
+
+const generatedSidebar = generateSidebar();
 
 // 导入评论系统
 
@@ -24,20 +29,23 @@ export default defineConfig({
   // esbuild requires a mapped drive in the restricted Codex worktree. The
   // dedicated prebuild checker still validates every local Markdown link.
   ...(process.env.VITEPRESS_MAPPED_DRIVE === "true"
-    ? {
-        ignoreDeadLinks: true,
-        vite: { resolve: { preserveSymlinks: true } },
-      }
+    ? { ignoreDeadLinks: true }
     : {}),
+  vite: {
+    ...(process.env.VITEPRESS_MAPPED_DRIVE === "true"
+      ? { resolve: { preserveSymlinks: true } }
+      : {}),
+    plugins: [sidebarWatcherPlugin()],
+  },
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     [
       "script",
       {
-        // Defer execution until the SSR-rendered footer counter is in the DOM.
-        defer: "true",
-        src: "https://events.vercount.one/js",
+        // VitePress head attributes expect string values
+        async: "true",
+        src: "https://cn.vercount.one/js",
       },
     ],
     [
@@ -88,7 +96,7 @@ export default defineConfig({
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one https://cn.vercount.one https://events.vercount.one;",
+          "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercount.one https://cn.vercount.one;",
       },
     ],
 
