@@ -776,6 +776,10 @@
             {
               "text": "JavaScript 入门",
               "link": "/contents/notes/web/fundamentals/3.JS入门"
+            },
+            {
+              "text": "原生前端调用 FastAPI",
+              "link": "/contents/notes/web/fundamentals/4.原生前端调用FastAPI"
             }
           ]
         },
