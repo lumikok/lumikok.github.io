@@ -349,6 +349,10 @@
             {
               "text": "基数排序",
               "link": "/contents/notes/algorithms/sorting/7.基数排序"
+            },
+            {
+              "text": "排序实现中的区间、不变量、稳定性与退化",
+              "link": "/contents/notes/algorithms/sorting/8.排序实现中的区间、不变量、稳定性与退化"
             }
           ]
         },
