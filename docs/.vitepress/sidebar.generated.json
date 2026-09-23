@@ -313,6 +313,10 @@
               "link": "/contents/notes/algorithms/searching/3.二分查找边界"
             },
             {
+              "text": "最小可行值二分",
+              "link": "/contents/notes/algorithms/searching/4.最小可行值二分"
+            },
+            {
               "text": "DFS",
               "link": "/contents/notes/algorithms/searching/DFS"
             }
