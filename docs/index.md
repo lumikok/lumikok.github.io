@@ -27,7 +27,7 @@ features:
     details: 按主题维护编程、算法、Web、AI 等学习笔记。
     link: /contents/notes/
   - title: 项目
-    details: 区分个人产品与学习项目，如实记录过程和边界。
+    details: 展示个人产品、学习项目与技术探索。
     link: /contents/projects/
   - title: 足迹
     details: 只保留阶段变化与重要节点，不把日常写成流水账。
@@ -36,16 +36,18 @@ features:
 
 ## 当前关注
 
-- 继续通过 FastAPI 记账本学习后端与前端联调。
 - 维护个人知识库，整理算法、Web 与软件工程学习成果。
-- 探索如何借助 AI 构建真正服务于个人需求的产品和学习工具。
+- 继续巩固数据结构、算法与计算机基础。
+- 探索如何借助 AI 构建服务于个人需求的产品和学习工具。
 
 ## 目前的项目
 
-<div class="knowledge-grid knowledge-grid--compact">
-  <a class="knowledge-card" href="/contents/projects/#拾光-learntrace"><span class="knowledge-card__eyebrow">PERSONAL PRODUCT · VIBE CODING</span><strong>拾光 LearnTrace</strong><span>围绕个人学习记录、周复盘与成长节点设计的本地桌面产品。</span></a>
-  <a class="knowledge-card" href="/contents/projects/#fastapi-记账本"><span class="knowledge-card__eyebrow">LEARNING PROJECT</span><strong>FastAPI 记账本</strong><span>用于学习后端、数据库、原生前端与接口联调的完整练习项目。</span></a>
+<!-- AUTO-CONTENT:HOME-PROJECTS:START -->
+<div class="featured-links">
+  <a href="/contents/projects/personal/learntrace"><span class="featured-links__index">01</span><span><strong>拾光 LearnTrace</strong><small>个人产品 · Vibe Coding　为学习记录、周复盘与成长节点设计的本地应用。</small></span></a>
+  <a href="/contents/projects/learning/tally-book"><span class="featured-links__index">02</span><span><strong>FastAPI 记账本</strong><small>学习项目　贯通后端、数据库、原生前端与接口联调。</small></span></a>
 </div>
+<!-- AUTO-CONTENT:HOME-PROJECTS:END -->
 
 ## 最近的成长节点
 
@@ -57,4 +59,8 @@ features:
 
 ## 最近文章
 
-- [《Teach Yourself Programming in Ten Years》读后感](/contents/essays/Teach%20Yourself%20Programming%20in%20Ten%20Years%20读后感)
+<!-- AUTO-CONTENT:HOME-ESSAYS:START -->
+<div class="featured-links">
+  <a href="/contents/essays/reading/Teach%20Yourself%20Programming%20in%20Ten%20Years%20%E8%AF%BB%E5%90%8E%E6%84%9F"><span class="featured-links__index">01</span><span><strong>《Teach Yourself Programming in Ten Years》读后感</strong><small>阅读　关于长期实践、学习节奏和编程成长的思考。</small></span></a>
+</div>
+<!-- AUTO-CONTENT:HOME-ESSAYS:END -->

@@ -6,11 +6,13 @@
   "author": "粥里有勺糖",
   "license": "MIT",
   "scripts": {
+    "generate:content": "node scripts/generateContentIndexes.js",
     "generate:sidebar": "node scripts/generateSidebar.js",
+    "generate": "npm run generate:content && npm run generate:sidebar",
     "check:links": "node scripts/checkLinks.mjs",
-    "predev": "npm run generate:sidebar",
+    "predev": "npm run generate",
     "dev": "vitepress dev docs",
-    "prebuild": "npm run generate:sidebar && npm run check:links",
+    "prebuild": "npm run generate && npm run check:links",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "preview": "vitepress preview docs"

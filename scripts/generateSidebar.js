@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { generateContentIndexes } from "./generateContentIndexes.js";
+
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const docsRoot = path.join(projectRoot, "docs");
 const contentsRoot = path.join(docsRoot, "contents");
@@ -219,15 +221,17 @@ export function sidebarWatcherPlugin() {
       const onChange = (event, filePath) => {
         const absolutePath = path.resolve(filePath);
         const isContent = absolutePath.startsWith(`${contentsRoot}${path.sep}`);
+        const isGeneratedIndex = path.basename(filePath).toLowerCase() === "index.md";
         const isRelevant =
           event === "addDir" ||
           event === "unlinkDir" ||
-          filePath.toLowerCase().endsWith(".md") ||
+          (filePath.toLowerCase().endsWith(".md") && !isGeneratedIndex) ||
           path.basename(filePath) === directoryMetaFile;
 
         if (!isContent || !isRelevant) return;
         clearTimeout(timer);
         timer = setTimeout(async () => {
+          generateContentIndexes();
           generateSidebar();
           await server.restart();
         }, 100);

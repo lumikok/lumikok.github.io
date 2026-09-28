@@ -5,8 +5,27 @@
       "link": "/contents/essays/"
     },
     {
-      "text": "Teach Yourself Programming in Ten Years 读后感",
-      "link": "/contents/essays/Teach Yourself Programming in Ten Years 读后感"
+      "text": "技术",
+      "collapsed": false,
+      "items": [],
+      "link": "/contents/essays/tech/"
+    },
+    {
+      "text": "思考",
+      "collapsed": false,
+      "items": [],
+      "link": "/contents/essays/thoughts/"
+    },
+    {
+      "text": "阅读",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "《Teach Yourself Programming in Ten Years》读后感",
+          "link": "/contents/essays/reading/Teach Yourself Programming in Ten Years 读后感"
+        }
+      ],
+      "link": "/contents/essays/reading/"
     }
   ],
   "/contents/journal/": [
@@ -898,6 +917,47 @@
     {
       "text": "项目",
       "link": "/contents/projects/"
+    },
+    {
+      "text": "个人产品",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "拾光 LearnTrace",
+          "link": "/contents/projects/personal/learntrace"
+        }
+      ],
+      "link": "/contents/projects/personal/"
+    },
+    {
+      "text": "学习项目",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "FastAPI 记账本",
+          "link": "/contents/projects/learning/tally-book"
+        },
+        {
+          "text": "AI 智能伴侣复现",
+          "link": "/contents/projects/learning/ai-partner-repro"
+        },
+        {
+          "text": "C 语言通讯录",
+          "link": "/contents/projects/learning/mini-address-book"
+        }
+      ],
+      "link": "/contents/projects/learning/"
+    },
+    {
+      "text": "工具探索",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Learning System",
+          "link": "/contents/projects/experiments/learning-system"
+        }
+      ],
+      "link": "/contents/projects/experiments/"
     }
   ]
 }

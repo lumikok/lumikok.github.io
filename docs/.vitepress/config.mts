@@ -4,9 +4,11 @@ import {
   generateSidebar,
   sidebarWatcherPlugin,
 } from "../../scripts/generateSidebar.js";
+import { generateContentIndexes } from "../../scripts/generateContentIndexes.js";
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
 
+generateContentIndexes();
 const generatedSidebar = generateSidebar();
 
 // 导入评论系统

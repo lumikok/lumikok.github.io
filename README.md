@@ -5,8 +5,9 @@
 ## 内容结构
 
 - `docs/contents/notes/`：按技术领域维护的长期知识笔记
-- `docs/contents/journal/`：按日期归档的学习日志、计划与复盘
-- `docs/contents/essays/`：随笔和读后感
+- `docs/contents/essays/`：技术、思考与阅读文章
+- `docs/contents/projects/`：个人产品、学习项目与工具探索
+- `docs/contents/journey/`：人工筛选的阶段变化和成长节点
 - `docs/contents/problems/`：按算法类型整理的题解
 
 ## 写一篇新笔记
@@ -17,4 +18,40 @@
 4. 本地运行 `npm run dev`。侧边栏会在启动前自动重新生成。
 5. 提交前运行 `npm run build`，检查链接和页面渲染。
 
-新增顶级栏目时，同时在 `scripts/generateSidebar.js` 的 `sidebarRules` 中登记。
+## 写一篇新文章
+
+在 `docs/contents/essays/tech/`、`thoughts/` 或 `reading/` 中新建 Markdown 文件：
+
+```yaml
+---
+title: 文章标题
+date: 2026-09-28
+description: 用一句话说明这篇文章讨论什么。
+---
+```
+
+文章总览、分类页、首页最近文章和侧边栏都会自动更新。
+
+## 添加一个新项目
+
+在 `docs/contents/projects/personal/`、`learning/` 或 `experiments/` 中新建 Markdown 文件：
+
+```yaml
+---
+title: 项目名称
+description: 用一句话说明项目的目的或收获。
+start: 2026-09
+end: present
+status: ongoing
+featured: false
+---
+```
+
+- `end` 使用 `present` 表示仍在进行，也可以填写 `2026-10`。
+- `status` 使用 `ongoing` 或 `completed`。
+- `featured: true` 会把项目放到首页；普通项目保持 `false` 或省略。
+- 如果需要标注开发方式，可增加 `method: Vibe Coding` 或 `method: 教程复现`。
+
+项目总览、所属分类、首页精选和侧边栏都会自动更新。正文无需再重复写分类和时间。
+
+成长足迹不自动收录所有内容，只在出现值得保留的阶段变化时人工添加。
