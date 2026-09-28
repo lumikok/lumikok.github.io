@@ -5,6 +5,8 @@ start: 2026-04
 end: 2026-05
 status: completed
 method: 教程复现
+repo: https://github.com/lumikok/AI-partner-repro
+stack: Streamlit · OpenAI API · JSON
 order: 2
 ---
 
@@ -21,5 +23,3 @@ order: 2
 - 使用 Streamlit 构建控制面板和聊天界面。
 
 通过这次复现，我第一次完整接触了 Streamlit 状态管理、大模型流式调用、System Prompt 和本地会话持久化。
-
-- [GitHub 仓库](https://github.com/lumikok/AI-partner-repro)

@@ -28,6 +28,24 @@ export default defineConfig({
   title: "lumikok",
   description: "lumikok 的知识、项目、思考与成长记录",
   cleanUrls: true,
+  transformPageData(pageData) {
+    const relativePath = pageData.relativePath.replace(/\\/g, "/");
+    const isEssay =
+      /^contents\/essays\/(tech|thoughts|reading)\/(?!index\.md$).+\.md$/.test(
+        relativePath,
+      );
+
+    // 只有真正的文章展示作者、阅读时间、赞赏与评论。
+    if (!isEssay) {
+      Object.assign(pageData.frontmatter, {
+        author: false,
+        date: false,
+        readingTime: false,
+        buttonAfterArticle: false,
+        comment: false,
+      });
+    }
+  },
   // esbuild requires a mapped drive in the restricted Codex worktree. The
   // dedicated prebuild checker still validates every local Markdown link.
   ...(process.env.VITEPRESS_MAPPED_DRIVE === "true"

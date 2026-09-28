@@ -6,6 +6,8 @@ end: present
 status: ongoing
 method: Vibe Coding
 featured: true
+repo: https://github.com/lumikok/LearnTrace
+release: https://github.com/lumikok/LearnTrace/releases/tag/v0.4.0
 order: 1
 ---
 
@@ -28,6 +30,3 @@ order: 1
 这个产品主要通过 vibe coding 完成。我负责提出需求、决定功能取舍、反馈问题、验收结果和推动迭代，代码实现主要由 AI 完成。
 
 目前已发布 `v0.4.0`，并完成跨电脑运行验收。
-
-- [GitHub 仓库](https://github.com/lumikok/LearnTrace)
-- [下载 v0.4.0](https://github.com/lumikok/LearnTrace/releases/tag/v0.4.0)

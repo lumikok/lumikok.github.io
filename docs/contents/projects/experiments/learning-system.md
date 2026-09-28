@@ -5,6 +5,8 @@ start: 2026-09
 end: present
 status: ongoing
 method: Vibe Coding
+repo: https://github.com/lumikok/learning-system
+stack: Codex Skills · Markdown
 order: 1
 ---
 
@@ -22,5 +24,3 @@ Learning System 是一组面向计算机科学与软件工程学习的 Codex Ski
 - 用一张图建立复杂概念的整体认识。
 
 这组 Skills 主要通过 vibe coding 完成。它目前服务于我的个人学习流程，也会随着实际使用继续调整边界和提示方式。
-
-- [GitHub 仓库](https://github.com/lumikok/learning-system)

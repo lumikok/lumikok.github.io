@@ -4,6 +4,8 @@ description: 围绕结构体、文件操作和动态内存完成的早期练习�
 start: 2025-11
 end: 2025-11
 status: completed
+repo: https://github.com/lumikok/mini-address-book
+stack: C · 文件操作 · 动态内存
 order: 3
 ---
 
@@ -19,5 +21,3 @@ order: 3
 - 显示全部联系人信息。
 
 项目练习了结构体、文件操作、动态内存、字符串处理、命令行交互以及输入检查等基础内容。
-
-- [GitHub 仓库](https://github.com/lumikok/mini-address-book)

@@ -44,6 +44,8 @@ start: 2026-09
 end: present
 status: ongoing
 featured: false
+repo: https://github.com/用户名/仓库名
+stack: 技术一 · 技术二
 ---
 ```
 
@@ -51,6 +53,7 @@ featured: false
 - `status` 使用 `ongoing` 或 `completed`。
 - `featured: true` 会把项目放到首页；普通项目保持 `false` 或省略。
 - 如果需要标注开发方式，可增加 `method: Vibe Coding` 或 `method: 教程复现`。
+- `repo`、`release` 和 `stack` 会自动显示在项目详情页，无需在正文重复维护。
 
 项目总览、所属分类、首页精选和侧边栏都会自动更新。正文无需再重复写分类和时间。
 

@@ -5,6 +5,8 @@ start: 2026-06
 end: 2026-09
 status: completed
 featured: true
+repo: https://github.com/lumikok/tally-book-lp
+stack: FastAPI · SQLAlchemy · SQLite · JavaScript
 order: 1
 ---
 
@@ -26,5 +28,3 @@ order: 1
 - 前端：HTML、CSS、JavaScript、ECharts。
 
 这个项目让我实际连接了数据模型、路由、数据库会话、接口调用和页面交互，也暴露了自己在数据库设计和前端基础上的不足。
-
-- [GitHub 仓库](https://github.com/lumikok/tally-book-lp)
