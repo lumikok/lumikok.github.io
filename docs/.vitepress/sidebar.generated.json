@@ -1,7 +1,7 @@
 {
   "/contents/essays/": [
     {
-      "text": "随笔",
+      "text": "文章",
       "link": "/contents/essays/"
     },
     {
@@ -81,6 +81,12 @@
           "link": "/contents/journal/plans/学习计划"
         }
       ]
+    }
+  ],
+  "/contents/journey/": [
+    {
+      "text": "成长足迹",
+      "link": "/contents/journey/"
     }
   ],
   "/contents/notes/": [
@@ -886,6 +892,12 @@
     {
       "text": "并查集",
       "link": "/contents/problems/union-find"
+    }
+  ],
+  "/contents/projects/": [
+    {
+      "text": "项目",
+      "link": "/contents/projects/"
     }
   ]
 }

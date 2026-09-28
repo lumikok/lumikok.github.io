@@ -24,7 +24,7 @@ export default defineConfig({
   // base,
   lang: "zh-CN",
   title: "lumikok",
-  description: "lumikok 的技术笔记、学习日志与题解",
+  description: "lumikok 的知识、项目、思考与成长记录",
   cleanUrls: true,
   // esbuild requires a mapped drive in the restricted Codex worktree. The
   // dedicated prebuild checker still validates every local Markdown link.
@@ -135,10 +135,10 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
+      { text: "文章", link: "/contents/essays/" },
       { text: "知识库", link: "/contents/notes/" },
-      { text: "学习日志", link: "/contents/journal/" },
-      { text: "随笔", link: "/contents/essays/" },
-      { text: "题解", link: "/contents/problems/" },
+      { text: "项目", link: "/contents/projects/" },
+      { text: "足迹", link: "/contents/journey/" },
       { text: "关于我", link: "/about/" },
     ],
     socialLinks: [

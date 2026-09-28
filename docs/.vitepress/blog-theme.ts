@@ -14,6 +14,8 @@ import { getThemeConfig } from "@sugarat/theme/node";
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
+  // 首页使用 VitePress 的个人主页布局，避免把知识笔记聚合成博客文章流。
+  blog: false,
   // 开启RSS支持
   // RSS,
 
@@ -32,12 +34,6 @@ const blogTheme = getThemeConfig({
 
   // 默认关闭 markdown 图表支持（开启会增加一定的构建耗时）
   mermaid: true,
-  alert: {
-    type: "success",
-    title: "欢迎来到我的博客，这里存储了我的笔记文档和一些随笔",
-    duration: 5000,
-  },
-
   // 图片预览
   imagePreview: {
     showProgress: true,
@@ -50,7 +46,7 @@ const blogTheme = getThemeConfig({
   authorList: [
     {
       nickname: "lumikok",
-      des: "奋斗的年轻人",
+      des: "在学习，也在构建",
       url: "https://lumikok.github.io/",
     },
   ],
