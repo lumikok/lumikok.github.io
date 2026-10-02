@@ -456,6 +456,10 @@
       "collapsed": false,
       "items": [
         {
+          "text": "FastAPI 接口测试",
+          "link": "/contents/notes/backend/FastAPI接口测试"
+        },
+        {
           "text": "FastAPI 请求模型与响应模型",
           "link": "/contents/notes/backend/FastAPI请求与响应模型"
         },
@@ -681,7 +685,7 @@
               "collapsed": true,
               "items": [
                 {
-                  "text": "list",
+                  "text": "列表",
                   "link": "/contents/notes/languages/python/2_数据容器/01_list"
                 },
                 {
