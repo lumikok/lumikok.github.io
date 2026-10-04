@@ -474,6 +474,10 @@
           "link": "/contents/notes/backend/FastAPI请求与响应模型"
         },
         {
+          "text": "FastAPI 与 SQLModel 数据库会话",
+          "link": "/contents/notes/backend/FastAPI与SQLModel数据库会话"
+        },
+        {
           "text": "Streamlit",
           "link": "/contents/notes/backend/streamlit"
         }

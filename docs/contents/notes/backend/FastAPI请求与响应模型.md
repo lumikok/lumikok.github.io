@@ -147,6 +147,58 @@ def create_task(data: TaskCreate) -> Any:
 
 无论使用 `response_model` 还是函数返回类型声明输出模型，密码等敏感字段都应从输出模型中明确排除。
 
+## PATCH：省略、`null` 与具体值
+
+部分更新需要区分三种输入；具体语义由接口契约决定：
+
+| 输入 | 本例语义 |
+| --- | --- |
+| 省略字段 | 保留旧值 |
+| 显式 `null` | `detail`、`priority` 清空；`title`、`plan_date`、`deadline` 拒绝 |
+| 具体值 | 校验通过后更新 |
+
+空字符串 `""` 也是具体值，不等于 `null`；例如空标题会被长度约束拒绝。
+
+```python
+from pydantic import BaseModel, Field, field_validator
+
+
+class TaskUpdate(BaseModel):
+    title: str | None = Field(default=None, min_length=1)
+    detail: str | None = None
+    priority: int | None = Field(default=None, ge=1, le=4)
+
+    @field_validator("title")
+    @classmethod
+    def reject_null_title(cls, value):
+        if value is None:
+            raise ValueError("title 不能为 null")
+        return value
+
+
+assert TaskUpdate().model_dump(exclude_unset=True) == {}
+assert TaskUpdate(detail=None).model_dump(exclude_unset=True) == {"detail": None}
+```
+
+此例未开启默认值校验，省略 `title` 时不会运行该字段的验证器；显式传入 `null` 则会触发验证。
+
+`exclude_unset=True` 排除的是未提供字段，保留显式传入的 `None`。`exclude_none=True` 会删掉这些 `None`，从而丢失“清空字段”的指令。
+
+### 日期与时刻组合
+
+以下是 Todo 的业务契约，不是 PATCH 的通用规则：
+
+| 本次提供字段 | 新截止时间 |
+| --- | --- |
+| 只提供 `plan_date` | 新日期 + `23:59:59` |
+| 只提供 `deadline` 时刻 | 原日期 + 新时刻 |
+| 两者都提供 | 新日期 + 新时刻 |
+| 两者都省略 | 保留原截止时间 |
+
+判断分支时检查字段是否出现在更新字典中。仅日期或时刻发生更新时校验新截止时间晚于当前时间；本例允许过期任务只修改标题、备注。
+
+参考：[FastAPI：部分更新与 exclude_unset](https://fastapi.tiangolo.com/tutorial/body-updates/)。
+
 ## 检查清单
 
 - 请求模型是否只包含客户端允许控制的字段？
