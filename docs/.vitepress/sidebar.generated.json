@@ -138,6 +138,16 @@
               "link": "/contents/notes/ai/agents/琐记"
             }
           ]
+        },
+        {
+          "text": "机器学习",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "训练、评估与数据泄漏",
+              "link": "/contents/notes/ai/machine-learning/01_训练、评估与数据泄漏"
+            }
+          ]
         }
       ]
     },
