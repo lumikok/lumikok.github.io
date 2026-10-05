@@ -466,16 +466,28 @@
       "collapsed": false,
       "items": [
         {
-          "text": "FastAPI 接口测试",
-          "link": "/contents/notes/backend/FastAPI接口测试"
+          "text": "FastAPI",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "FastAPI 请求模型与响应模型",
+              "link": "/contents/notes/backend/fastapi/01_请求与响应模型"
+            },
+            {
+              "text": "FastAPI 路由与依赖注入",
+              "link": "/contents/notes/backend/fastapi/02_路由与依赖注入"
+            }
+          ]
         },
         {
-          "text": "FastAPI 请求模型与响应模型",
-          "link": "/contents/notes/backend/FastAPI请求与响应模型"
-        },
-        {
-          "text": "FastAPI 与 SQLModel 数据库会话",
-          "link": "/contents/notes/backend/FastAPI与SQLModel数据库会话"
+          "text": "接口测试",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "接口测试：隔离与断言",
+              "link": "/contents/notes/backend/testing/01_接口测试"
+            }
+          ]
         },
         {
           "text": "Streamlit",
@@ -516,6 +528,20 @@
             {
               "text": "MySQL与SQL的学习",
               "link": "/contents/notes/databases/mysql/基础"
+            }
+          ]
+        },
+        {
+          "text": "SQLModel",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "SQLModel 会话与事务",
+              "link": "/contents/notes/databases/sqlmodel/01_会话与事务"
+            },
+            {
+              "text": "SQLAlchemy 聚合查询与结果",
+              "link": "/contents/notes/databases/sqlmodel/02_聚合查询与结果"
             }
           ]
         }
@@ -749,6 +775,10 @@
               "link": "/contents/notes/languages/python/08_文件操作"
             },
             {
+              "text": "Python 类方法与资源管理",
+              "link": "/contents/notes/languages/python/09_类方法与资源管理"
+            },
+            {
               "text": "本笔记记录的内容",
               "link": "/contents/notes/languages/python/前言"
             }
@@ -813,6 +843,10 @@
             {
               "text": "基本文本和字体样式",
               "link": "/contents/notes/web/css/8.基本文本和字体样式"
+            },
+            {
+              "text": "CSS 布局与响应式",
+              "link": "/contents/notes/web/css/9.布局与响应式"
             }
           ]
         },
@@ -833,8 +867,8 @@
               "link": "/contents/notes/web/fundamentals/3.JS入门"
             },
             {
-              "text": "原生前端调用 FastAPI",
-              "link": "/contents/notes/web/fundamentals/4.原生前端调用FastAPI"
+              "text": "原生前端请求与交互",
+              "link": "/contents/notes/web/fundamentals/4.原生前端请求与交互"
             }
           ]
         },
