@@ -38,52 +38,12 @@
       "collapsed": false,
       "items": [
         {
-          "text": "第一步",
-          "link": "/contents/journal/2026/2026-05-12-fastapi"
-        },
-        {
-          "text": "请求体",
-          "link": "/contents/journal/2026/2026-05-13-fastapi"
-        },
-        {
-          "text": "查询参数和字符串校验",
-          "link": "/contents/journal/2026/2026-05-16-fastapi"
-        },
-        {
-          "text": "请求体",
-          "link": "/contents/journal/2026/2026-05-21-fastapi"
-        },
-        {
-          "text": "声明请求示例数据",
-          "link": "/contents/journal/2026/2026-05-23-fastapi"
-        },
-        {
-          "text": "Cookie 参数模型",
-          "link": "/contents/journal/2026/2026-05-25-fastapi"
-        },
-        {
-          "text": "依赖注入",
-          "link": "/contents/journal/2026/2026-06-18-fastapi"
-        },
-        {
           "text": "今日学习笔记",
           "link": "/contents/journal/2026/2026-07-10-qt"
         },
         {
-          "text": "错误处理",
-          "link": "/contents/journal/2026/2026-07-11-fastapi"
-        },
-        {
           "text": "今日学习笔记",
           "link": "/contents/journal/2026/2026-07-11-qt"
-        },
-        {
-          "text": "路径操作配置",
-          "link": "/contents/journal/2026/2026-07-18-fastapi"
-        },
-        {
-          "text": "异步",
-          "link": "/contents/journal/2026/2026-07-19-fastapi"
         }
       ]
     },
@@ -470,12 +430,36 @@
           "collapsed": true,
           "items": [
             {
+              "text": "FastAPI 启动与学习导航",
+              "link": "/contents/notes/backend/fastapi/00_启动与学习导航"
+            },
+            {
               "text": "FastAPI 请求模型与响应模型",
               "link": "/contents/notes/backend/fastapi/01_请求与响应模型"
             },
             {
               "text": "FastAPI 路由与依赖注入",
               "link": "/contents/notes/backend/fastapi/02_路由与依赖注入"
+            },
+            {
+              "text": "参数来源与校验",
+              "link": "/contents/notes/backend/fastapi/03_参数来源与校验"
+            },
+            {
+              "text": "请求体与数据类型",
+              "link": "/contents/notes/backend/fastapi/04_请求体与数据类型"
+            },
+            {
+              "text": "异常与错误响应",
+              "link": "/contents/notes/backend/fastapi/05_异常与错误响应"
+            },
+            {
+              "text": "接口配置与中间件",
+              "link": "/contents/notes/backend/fastapi/06_接口配置与中间件"
+            },
+            {
+              "text": "异步与数据库接入",
+              "link": "/contents/notes/backend/fastapi/07_异步与数据库接入"
             }
           ]
         },
