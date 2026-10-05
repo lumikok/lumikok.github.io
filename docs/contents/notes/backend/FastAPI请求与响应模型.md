@@ -57,7 +57,7 @@ class TaskRead(TaskBase):
 
 `title` 和 `priority` 放在 `TaskBase` 中，请求模型和响应模型会使用相同约束。若两侧约束不同，应是明确的业务设计，而不是遗漏。
 
-真实校验结果：
+校验示例：
 
 - `title=""`：触发 `string_too_short`；
 - `priority=5`：超过 `le=4`，校验失败；
@@ -151,10 +151,10 @@ def create_task(data: TaskCreate) -> Any:
 
 部分更新需要区分三种输入；具体语义由接口契约决定：
 
-| 输入 | 本例语义 |
+| 输入 | 常见处理 |
 | --- | --- |
 | 省略字段 | 保留旧值 |
-| 显式 `null` | `detail`、`priority` 清空；`title`、`plan_date`、`deadline` 拒绝 |
+| 显式 `null` | 允许为空的字段可清空；不允许为空的字段拒绝 |
 | 具体值 | 校验通过后更新 |
 
 空字符串 `""` 也是具体值，不等于 `null`；例如空标题会被长度约束拒绝。
@@ -184,20 +184,76 @@ assert TaskUpdate(detail=None).model_dump(exclude_unset=True) == {"detail": None
 
 `exclude_unset=True` 排除的是未提供字段，保留显式传入的 `None`。`exclude_none=True` 会删掉这些 `None`，从而丢失“清空字段”的指令。
 
+### 判断字段是否提供
+
+```python
+changes = data.model_dump(exclude_unset=True)
+if "detail" in changes:
+    task.detail = changes["detail"]
+```
+
+`"detail" in changes` 判断键是否存在；`changes.get("detail")` 在键缺失和值为 `None` 时都返回 `None`，不能区分省略与清空。
+
 ### 日期与时刻组合
 
-以下是 Todo 的业务契约，不是 PATCH 的通用规则：
+```python
+from datetime import date, datetime, time
 
-| 本次提供字段 | 新截止时间 |
-| --- | --- |
-| 只提供 `plan_date` | 新日期 + `23:59:59` |
-| 只提供 `deadline` 时刻 | 原日期 + 新时刻 |
-| 两者都提供 | 新日期 + 新时刻 |
-| 两者都省略 | 保留原截止时间 |
+day = date(2026, 10, 5)
+clock = time(10, 30)
+deadline = datetime.combine(day, clock)
+assert deadline == datetime(2026, 10, 5, 10, 30)
+```
 
-判断分支时检查字段是否出现在更新字典中。仅日期或时刻发生更新时校验新截止时间晚于当前时间；本例允许过期任务只修改标题、备注。
+`date` 表示日期，`time` 表示时刻，`datetime.combine()` 合成为完整时间点。部分更新时先根据已提供字段与旧值形成候选日期、时刻，再统一组合与校验。默认时刻、是否允许清空等由业务契约决定。
 
 参考：[FastAPI：部分更新与 exclude_unset](https://fastapi.tiangolo.com/tutorial/body-updates/)。
+
+## 未声明字段：`extra`
+
+Pydantic 模型默认忽略未声明的输入字段。传入额外字段后请求仍可能成功，但该字段不会进入模型或更新字典。
+
+```python
+from pydantic import BaseModel, ConfigDict
+
+
+class Rename(BaseModel):
+    title: str
+
+
+data = Rename(title="读书", status="completed")
+assert data.model_dump() == {"title": "读书"}
+
+
+class StrictRename(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    title: str
+```
+
+`extra="forbid"` 拒绝额外字段；用于 FastAPI 请求模型时，这类校验失败通常返回 `422`。`extra="allow"` 则保留额外字段。输入忽略与响应过滤发生在不同阶段。
+
+参考：[Pydantic：额外字段配置](https://docs.pydantic.dev/latest/api/config/#pydantic.config.ConfigDict.extra)。
+
+## HTTP 方法与路径
+
+```python
+@app.patch("/tasks/{task_id}")
+def update_task(task_id: UUID):
+    ...
+
+
+@app.post("/tasks/{task_id}/complete")
+def complete_task(task_id: UUID):
+    ...
+```
+
+HTTP 方法与路径共同决定请求匹配哪个接口；修改 JSON 字段不会改变请求方法或调用另一个接口。
+
+- `PATCH /tasks/{id}` 与 `POST /tasks/{id}/complete` 是不同接口；
+- 路径匹配但方法不支持时返回 `405 Method Not Allowed`，检查客户端请求方法及响应 `Allow` 头；
+- JSON 中写 `"status_code": 200` 只是响应体字段，HTTP 状态码由响应对象或路由配置决定。
+
+参考：[Starlette：路由匹配](https://www.starlette.io/routing/)。
 
 ## 检查清单
 

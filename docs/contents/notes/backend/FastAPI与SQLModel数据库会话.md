@@ -53,21 +53,42 @@ tasks = result.all()
 从 session 取出的 ORM 对象会被跟踪。应先在局部变量中形成新值并完成业务校验，通过后再修改对象、提交：
 
 ```python
-new_deadline = build_candidate_deadline(task, changes)
-if deadline_changed and new_deadline <= datetime.now():
-    raise HTTPException(status_code=400, detail="截止时间必须晚于当前时间")
+candidate = build_candidate(task, changes)
+validate_candidate(candidate)  # 非法时抛出异常，尚未修改 task
 
-for name, value in changes.items():
-    if name != "deadline":
-        setattr(task, name, value)
-if deadline_changed:
-    task.deadline = new_deadline
+for name, value in candidate.items():
+    setattr(task, name, value)
 
 await session.commit()
 await session.refresh(task)
 ```
 
-这里的辅助函数和变量表示业务算法。若先修改对象再检查，失败前就可能污染会话中的对象；某些后续操作还会触发自动 flush。候选值校验不替代事务管理；提交失败时仍需回滚或结束当前会话。
+`build_candidate` 和 `validate_candidate` 是业务辅助函数的占位示例；`setattr(obj, name, value)` 按字符串属性名赋值。候选字典只能包含允许更新的字段。若先修改对象再检查，失败前就可能污染会话中的对象；某些后续操作还会触发自动 flush。候选值校验不替代事务管理；提交失败时仍需回滚或结束当前会话。
+
+### 条件分支与字段保留
+
+```python
+if is_final and "deadline" in changes:
+    raise HTTPException(status_code=409, detail="当前状态不允许修改时间")
+
+candidate = build_candidate(task, changes)
+validate_candidate(candidate)
+```
+
+先检查当前对象是否允许执行该操作，再形成候选值并修改。对需要保留的字段，不应在通用更新逻辑中无条件重新赋值；例如某事件首次发生的时间，后续修改其他字段时应保留。
+
+### 时间判断与存储状态
+
+保存的状态只代表上次维护时的结果。时间经过不会自动执行 Python 代码，也不会自动更新数据库。
+
+```python
+now = datetime.now()
+is_overdue = now >= task.deadline
+```
+
+涉及当前是否到期的判断应比较真实时间边界，不能只相信之前存储的状态。同一次操作复用一个 `now`，避免多个判断跨过边界后出现不一致；时间值需使用一致的时区语义。
+
+按请求更新派生状态，只在请求触发时执行；若需要无请求时仍主动更新，就需要独立的调度机制。已结束的记录是否参与重新计算，应由明确的条件限制。
 
 ## 每个测试使用独立数据库
 
@@ -119,7 +140,7 @@ finally:
 - naive datetime：不包含时区信息，例如 `datetime.now()`；
 - aware datetime：包含时区信息。
 
-本次使用 SQLModel `0.0.47`，普通 `datetime` 列采用 UTC 时间类型，写入 naive 值时出错。既有接口采用服务器本地时间，因此显式选用 `NaiveDatetime`：
+SQLModel `0.0.47` 中，普通 `datetime` 列采用 UTC 时间类型，写入 naive 值会报错。若接口明确采用无时区时间，可显式选用 `NaiveDatetime`：
 
 ```python
 from pydantic import NaiveDatetime
@@ -132,4 +153,4 @@ class Task(SQLModel, table=True):
     created_at: NaiveDatetime
 ```
 
-这是保留既有时间契约的选择，不代表所有系统都应使用无时区时间。跨时区系统应统一时间语义，并同时调整输入、比较、存储与输出。[SQLModel 时间类型说明](https://sqlmodel.tiangolo.com/advanced/datetime/)
+跨时区系统应统一时间语义，并同时调整输入、比较、存储与输出。[SQLModel 时间类型说明](https://sqlmodel.tiangolo.com/advanced/datetime/)

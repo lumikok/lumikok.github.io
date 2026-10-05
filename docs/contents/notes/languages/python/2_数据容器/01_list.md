@@ -37,13 +37,13 @@ tasks.sort(
 ### `sort()` 与 `sorted()`
 
 ```python
-tasks.sort(key=...)             # 修改原列表，返回 None
-new_tasks = sorted(tasks, key=...)  # 返回新列表，不修改原列表
+tasks.sort(key=lambda task: task.priority)  # 修改原列表，返回 None
+new_tasks = sorted(tasks, key=lambda task: task.priority)  # 返回新列表
 ```
 
 ### 筛选后再统一返回
 
-`return` 放在循环内部会立即结束整个函数，导致最多只处理一个元素：
+循环执行到 `return` 时会立即结束整个函数。需要收集全部结果时，应在循环结束后返回，或先用列表推导式筛选：
 
 ```python
 def get_tasks(tasks, plan_date):
