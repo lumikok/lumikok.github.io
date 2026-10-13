@@ -106,6 +106,10 @@
             {
               "text": "训练、评估与数据泄漏",
               "link": "/contents/notes/ai/machine-learning/01_训练、评估与数据泄漏"
+            },
+            {
+              "text": "欠拟合、过拟合与线性回归",
+              "link": "/contents/notes/ai/machine-learning/02_欠拟合、过拟合与线性回归"
             }
           ]
         }
