@@ -45,7 +45,7 @@ features:
 <!-- AUTO-CONTENT:HOME-PROJECTS:START -->
 <div class="featured-links">
   <a href="/contents/projects/personal/learntrace"><span class="featured-links__index">01</span><span><strong>拾光 LearnTrace</strong><small>个人产品 · Vibe Coding　为学习记录、周复盘与成长节点设计的本地应用。</small></span></a>
-  <a href="/contents/projects/learning/tally-book"><span class="featured-links__index">02</span><span><strong>FastAPI 记账本</strong><small>学习项目　贯通后端、数据库、原生前端与接口联调。</small></span></a>
+  <a href="/contents/projects/learning/tally-book"><span class="featured-links__index">02</span><span><strong>FastAPI 记账本</strong><small>学习项目　作为 FastAPI 与基础前端的学习载体，连接接口、数据库、页面和统计图表。</small></span></a>
 </div>
 <!-- AUTO-CONTENT:HOME-PROJECTS:END -->
 

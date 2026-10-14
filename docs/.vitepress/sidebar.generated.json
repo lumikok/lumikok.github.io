@@ -1,4 +1,10 @@
 {
+  "/contents/competitions/": [
+    {
+      "text": "竞赛",
+      "link": "/contents/competitions/"
+    }
+  ],
   "/contents/essays/": [
     {
       "text": "文章",
@@ -969,6 +975,10 @@
         {
           "text": "拾光 LearnTrace",
           "link": "/contents/projects/personal/learntrace"
+        },
+        {
+          "text": "极简番茄钟 Minimal Pomodoro",
+          "link": "/contents/projects/personal/minimal-pomodoro"
         }
       ],
       "link": "/contents/projects/personal/"
@@ -980,6 +990,10 @@
         {
           "text": "FastAPI 记账本",
           "link": "/contents/projects/learning/tally-book"
+        },
+        {
+          "text": "Todo API",
+          "link": "/contents/projects/learning/todo-app"
         },
         {
           "text": "AI 智能伴侣复现",
@@ -1002,6 +1016,17 @@
         }
       ],
       "link": "/contents/projects/experiments/"
+    },
+    {
+      "text": "学习实验",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "AI Learning Lab",
+          "link": "/contents/projects/labs/ai-learning-lab"
+        }
+      ],
+      "link": "/contents/projects/labs/"
     }
   ]
 }

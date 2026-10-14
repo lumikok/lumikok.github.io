@@ -9,6 +9,7 @@ const categoryLabels: Record<string, string> = {
   personal: "个人产品",
   learning: "学习项目",
   experiments: "工具探索",
+  labs: "学习实验",
 };
 
 const category = computed(() => {

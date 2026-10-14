@@ -8,6 +8,7 @@ method: Vibe Coding
 featured: true
 repo: https://github.com/lumikok/LearnTrace
 release: https://github.com/lumikok/LearnTrace/releases/tag/v0.4.0
+stack: FastAPI · SQLite · JavaScript · pywebview · PyInstaller
 order: 1
 ---
 
@@ -29,4 +30,8 @@ order: 1
 
 这个产品主要通过 vibe coding 完成。我负责提出需求、决定功能取舍、反馈问题、验收结果和推动迭代，代码实现主要由 AI 完成。
 
-目前已发布 `v0.4.0`，并完成跨电脑运行验收。
+## 代表进展
+
+- 2026 年 9 月 26 日：发布 `v0.4.0` Windows 桌面版，完成跨电脑运行验收。
+- 2026 年 9 月 29 日：本地源码与构建更新到 `0.4.1`，接入正式产品图标；项目文档记录该版本尚未上传 Release，页面下载入口仍指向已发布的 `v0.4.0`。
+- 2026 年 10 月 11 日：增加从应用备份导出只读数据库快照的工具和接入说明，供其他本地项目读取；快照由用户手动更新。

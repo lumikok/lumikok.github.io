@@ -158,6 +158,7 @@ export default defineConfig({
       { text: "文章", link: "/contents/essays/" },
       { text: "知识库", link: "/contents/notes/" },
       { text: "项目", link: "/contents/projects/" },
+      { text: "竞赛", link: "/contents/competitions/" },
       { text: "足迹", link: "/contents/journey/" },
       { text: "关于我", link: "/about/" },
     ],
