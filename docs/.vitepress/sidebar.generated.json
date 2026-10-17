@@ -943,8 +943,16 @@
       "link": "/contents/problems/dfs"
     },
     {
+      "text": "哈希统计",
+      "link": "/contents/problems/hash"
+    },
+    {
       "text": "队列",
       "link": "/contents/problems/queue"
+    },
+    {
+      "text": "滑动窗口",
+      "link": "/contents/problems/sliding-window"
     },
     {
       "text": "排序",
