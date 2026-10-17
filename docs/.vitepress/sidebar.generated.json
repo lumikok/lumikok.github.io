@@ -101,7 +101,7 @@
             },
             {
               "text": "琐记",
-              "link": "/contents/notes/ai/agents/琐记"
+              "link": "/contents/notes/ai/agents/04_琐记"
             }
           ]
         },
@@ -130,20 +130,20 @@
           "collapsed": true,
           "items": [
             {
-              "text": "2.1 算法效率评估",
-              "link": "/contents/notes/algorithms/complexity/2.1 算法效率评估"
+              "text": "算法效率评估",
+              "link": "/contents/notes/algorithms/complexity/01_算法效率评估"
             },
             {
-              "text": "2.2 迭代与递归",
-              "link": "/contents/notes/algorithms/complexity/2.2 迭代与递归"
+              "text": "迭代与递归",
+              "link": "/contents/notes/algorithms/complexity/02_迭代与递归"
             },
             {
-              "text": "2.3 时间复杂度",
-              "link": "/contents/notes/algorithms/complexity/2.3 时间复杂度"
+              "text": "时间复杂度",
+              "link": "/contents/notes/algorithms/complexity/03_时间复杂度"
             },
             {
-              "text": "2.4 空间复杂度",
-              "link": "/contents/notes/algorithms/complexity/2.4 空间复杂度"
+              "text": "空间复杂度",
+              "link": "/contents/notes/algorithms/complexity/04_空间复杂度"
             }
           ]
         },
@@ -167,19 +167,19 @@
               "items": [
                 {
                   "text": "二叉树",
-                  "link": "/contents/notes/algorithms/data-structures/binary-tree/二叉树"
+                  "link": "/contents/notes/algorithms/data-structures/binary-tree/01_二叉树"
                 },
                 {
                   "text": "二叉树遍历",
-                  "link": "/contents/notes/algorithms/data-structures/binary-tree/二叉树遍历"
+                  "link": "/contents/notes/algorithms/data-structures/binary-tree/02_二叉树遍历"
                 },
                 {
                   "text": "二叉树数组表示",
-                  "link": "/contents/notes/algorithms/data-structures/binary-tree/二叉树数组表示"
+                  "link": "/contents/notes/algorithms/data-structures/binary-tree/03_二叉树数组表示"
                 },
                 {
                   "text": "二叉搜索树",
-                  "link": "/contents/notes/algorithms/data-structures/binary-tree/二叉搜索树"
+                  "link": "/contents/notes/algorithms/data-structures/binary-tree/04_二叉搜索树"
                 }
               ]
             },
@@ -188,16 +188,16 @@
               "collapsed": true,
               "items": [
                 {
-                  "text": "3.1 数据结构的分类",
-                  "link": "/contents/notes/algorithms/data-structures/foundations/1.1 数据结构的分类"
+                  "text": "数据结构的分类",
+                  "link": "/contents/notes/algorithms/data-structures/foundations/01_数据结构的分类"
                 },
                 {
-                  "text": "补 1.数字编码",
-                  "link": "/contents/notes/algorithms/data-structures/foundations/补 1.数字编码"
+                  "text": "数字编码",
+                  "link": "/contents/notes/algorithms/data-structures/foundations/02_数字编码"
                 },
                 {
-                  "text": "补 2.字符编码",
-                  "link": "/contents/notes/algorithms/data-structures/foundations/补 2.字符编码"
+                  "text": "字符编码",
+                  "link": "/contents/notes/algorithms/data-structures/foundations/03_字符编码"
                 }
               ]
             },
@@ -257,11 +257,11 @@
               "items": [
                 {
                   "text": "队列",
-                  "link": "/contents/notes/algorithms/data-structures/queue/队列"
+                  "link": "/contents/notes/algorithms/data-structures/queue/01_队列"
                 },
                 {
                   "text": "双向队列",
-                  "link": "/contents/notes/algorithms/data-structures/queue/双向队列"
+                  "link": "/contents/notes/algorithms/data-structures/queue/02_双向队列"
                 }
               ]
             },
@@ -302,28 +302,28 @@
           "collapsed": true,
           "items": [
             {
-              "text": "二分查找",
-              "link": "/contents/notes/algorithms/searching/1.二分查找"
+              "text": "线性查找",
+              "link": "/contents/notes/algorithms/searching/01_线性与哈希优化"
             },
             {
-              "text": "线性查找",
-              "link": "/contents/notes/algorithms/searching/01.线性与哈希优化"
+              "text": "二分查找",
+              "link": "/contents/notes/algorithms/searching/02_二分查找"
             },
             {
               "text": "二分查找插入点",
-              "link": "/contents/notes/algorithms/searching/2.二分查找插入点"
+              "link": "/contents/notes/algorithms/searching/03_二分查找插入点"
             },
             {
               "text": "二分查找边界",
-              "link": "/contents/notes/algorithms/searching/3.二分查找边界"
+              "link": "/contents/notes/algorithms/searching/04_二分查找边界"
             },
             {
               "text": "最小可行值二分",
-              "link": "/contents/notes/algorithms/searching/4.最小可行值二分"
+              "link": "/contents/notes/algorithms/searching/05_最小可行值二分"
             },
             {
               "text": "DFS",
-              "link": "/contents/notes/algorithms/searching/DFS"
+              "link": "/contents/notes/algorithms/searching/06_DFS"
             }
           ]
         },
@@ -333,35 +333,35 @@
           "items": [
             {
               "text": "选择排序",
-              "link": "/contents/notes/algorithms/sorting/1.选择排序"
+              "link": "/contents/notes/algorithms/sorting/01_选择排序"
             },
             {
               "text": "冒泡排序",
-              "link": "/contents/notes/algorithms/sorting/2.冒泡排序"
+              "link": "/contents/notes/algorithms/sorting/02_冒泡排序"
             },
             {
               "text": "插入排序",
-              "link": "/contents/notes/algorithms/sorting/3.插入排序"
+              "link": "/contents/notes/algorithms/sorting/03_插入排序"
             },
             {
               "text": "快速排序",
-              "link": "/contents/notes/algorithms/sorting/4.快速排序"
+              "link": "/contents/notes/algorithms/sorting/04_快速排序"
             },
             {
               "text": "归并排序",
-              "link": "/contents/notes/algorithms/sorting/5.归并排序"
+              "link": "/contents/notes/algorithms/sorting/05_归并排序"
             },
             {
               "text": "计数排序",
-              "link": "/contents/notes/algorithms/sorting/6.计数排序"
+              "link": "/contents/notes/algorithms/sorting/06_计数排序"
             },
             {
               "text": "基数排序",
-              "link": "/contents/notes/algorithms/sorting/7.基数排序"
+              "link": "/contents/notes/algorithms/sorting/07_基数排序"
             },
             {
               "text": "排序实现中的区间、不变量、稳定性与退化",
-              "link": "/contents/notes/algorithms/sorting/8.排序实现中的区间、不变量、稳定性与退化"
+              "link": "/contents/notes/algorithms/sorting/08_排序实现中的区间、不变量、稳定性与退化"
             }
           ]
         },
@@ -375,15 +375,15 @@
               "items": [
                 {
                   "text": "分治策略",
-                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/1.分治策略"
-                },
-                {
-                  "text": "分治优化搜索",
-                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/分治优化"
+                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/01_分治策略"
                 },
                 {
                   "text": "汉诺塔问题",
-                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/汉诺塔"
+                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/02_汉诺塔"
+                },
+                {
+                  "text": "分治优化搜索",
+                  "link": "/contents/notes/algorithms/techniques/divide-and-conquer/03_分治优化"
                 }
               ]
             },
@@ -393,11 +393,11 @@
               "items": [
                 {
                   "text": "双指针",
-                  "link": "/contents/notes/algorithms/techniques/pointers/1.双指针"
+                  "link": "/contents/notes/algorithms/techniques/pointers/01_双指针"
                 },
                 {
                   "text": "快慢指针",
-                  "link": "/contents/notes/algorithms/techniques/pointers/2.快慢指针"
+                  "link": "/contents/notes/algorithms/techniques/pointers/02_快慢指针"
                 }
               ]
             },
@@ -407,25 +407,25 @@
               "items": [
                 {
                   "text": "前缀和",
-                  "link": "/contents/notes/algorithms/techniques/preprocessing/1.前缀和"
+                  "link": "/contents/notes/algorithms/techniques/preprocessing/01_前缀和"
                 },
                 {
                   "text": "差分",
-                  "link": "/contents/notes/algorithms/techniques/preprocessing/2.差分"
+                  "link": "/contents/notes/algorithms/techniques/preprocessing/02_差分"
                 },
                 {
                   "text": "前缀和与差分的联系",
-                  "link": "/contents/notes/algorithms/techniques/preprocessing/3.前缀和与差分的联系"
+                  "link": "/contents/notes/algorithms/techniques/preprocessing/03_前缀和与差分的联系"
                 }
               ]
             },
             {
               "text": "滑动窗口",
-              "link": "/contents/notes/algorithms/techniques/6.滑动窗口"
+              "link": "/contents/notes/algorithms/techniques/01_滑动窗口"
             },
             {
               "text": "回溯算法",
-              "link": "/contents/notes/algorithms/techniques/回溯算法"
+              "link": "/contents/notes/algorithms/techniques/02_回溯算法"
             }
           ]
         }
@@ -494,20 +494,20 @@
       "collapsed": false,
       "items": [
         {
-          "text": "程序中的进制转换",
-          "link": "/contents/notes/computer-fundamentals/程序中的进制转换"
-        },
-        {
           "text": "各进制数表示方式",
-          "link": "/contents/notes/computer-fundamentals/各进制数表示方式"
+          "link": "/contents/notes/computer-fundamentals/01_各进制数表示方式"
         },
         {
           "text": "进制转换",
-          "link": "/contents/notes/computer-fundamentals/进制转换"
+          "link": "/contents/notes/computer-fundamentals/02_进制转换"
+        },
+        {
+          "text": "程序中的进制转换",
+          "link": "/contents/notes/computer-fundamentals/03_程序中的进制转换"
         },
         {
           "text": "位运算",
-          "link": "/contents/notes/computer-fundamentals/位运算"
+          "link": "/contents/notes/computer-fundamentals/04_位运算"
         }
       ]
     },
@@ -560,24 +560,24 @@
           "collapsed": true,
           "items": [
             {
-              "text": "assert",
-              "link": "/contents/notes/languages/c/assert"
+              "text": "C语言的学习",
+              "link": "/contents/notes/languages/c/01_c"
             },
             {
               "text": "C语言运算符备忘录（随记）",
-              "link": "/contents/notes/languages/c/c calculate"
+              "link": "/contents/notes/languages/c/02_c calculate"
             },
             {
-              "text": "C语言的学习",
-              "link": "/contents/notes/languages/c/c"
-            },
-            {
-              "text": "C语言日常学习备忘录（记录个人的一些看法）",
-              "link": "/contents/notes/languages/c/cbuchong"
+              "text": "assert",
+              "link": "/contents/notes/languages/c/03_assert"
             },
             {
               "text": "sprintf",
-              "link": "/contents/notes/languages/c/sprintf"
+              "link": "/contents/notes/languages/c/04_sprintf"
+            },
+            {
+              "text": "C语言日常学习备忘录（记录个人的一些看法）",
+              "link": "/contents/notes/languages/c/05_cbuchong"
             }
           ],
           "link": "/contents/notes/languages/c/"
@@ -587,28 +587,36 @@
           "collapsed": true,
           "items": [
             {
+              "text": "C++目录",
+              "link": "/contents/notes/languages/cpp/00_C++目录"
+            },
+            {
+              "text": "从 C 转向 C++",
+              "link": "/contents/notes/languages/cpp/01_从 C 转向 Cpp"
+            },
+            {
               "text": "基础语法",
               "collapsed": true,
               "items": [
                 {
+                  "text": "由C转向C++",
+                  "link": "/contents/notes/languages/cpp/basics/01_由C转向C++"
+                },
+                {
                   "text": "传统for循环",
-                  "link": "/contents/notes/languages/cpp/basics/传统for循环"
-                },
-                {
-                  "text": "迭代器遍历",
-                  "link": "/contents/notes/languages/cpp/basics/迭代器遍历"
-                },
-                {
-                  "text": "动态内存",
-                  "link": "/contents/notes/languages/cpp/basics/动态内存"
+                  "link": "/contents/notes/languages/cpp/basics/02_传统for循环"
                 },
                 {
                   "text": "范围for循环",
-                  "link": "/contents/notes/languages/cpp/basics/范围for循环"
+                  "link": "/contents/notes/languages/cpp/basics/03_范围for循环"
                 },
                 {
-                  "text": "由C转向C++",
-                  "link": "/contents/notes/languages/cpp/basics/由C转向C++"
+                  "text": "迭代器遍历",
+                  "link": "/contents/notes/languages/cpp/basics/04_迭代器遍历"
+                },
+                {
+                  "text": "动态内存",
+                  "link": "/contents/notes/languages/cpp/basics/05_动态内存"
                 }
               ]
             },
@@ -618,59 +626,59 @@
               "items": [
                 {
                   "text": "类与对象初识",
-                  "link": "/contents/notes/languages/cpp/oop/1.类与对象初识"
+                  "link": "/contents/notes/languages/cpp/oop/01_类与对象初识"
                 },
                 {
                   "text": "类的成员函数",
-                  "link": "/contents/notes/languages/cpp/oop/2.类成员函数"
+                  "link": "/contents/notes/languages/cpp/oop/02_类成员函数"
                 },
                 {
                   "text": "类的访问修饰符",
-                  "link": "/contents/notes/languages/cpp/oop/3.类访问修饰符"
+                  "link": "/contents/notes/languages/cpp/oop/03_类访问修饰符"
+                },
+                {
+                  "text": "类的三大核心特性",
+                  "link": "/contents/notes/languages/cpp/oop/04_封装"
                 },
                 {
                   "text": "构造函数与析构函数",
-                  "link": "/contents/notes/languages/cpp/oop/4.构造函数与析构函数"
+                  "link": "/contents/notes/languages/cpp/oop/05_构造函数与析构函数"
                 },
                 {
                   "text": "拷贝构造函数",
-                  "link": "/contents/notes/languages/cpp/oop/5.拷贝构造函数"
-                },
-                {
-                  "text": "友元函数",
-                  "link": "/contents/notes/languages/cpp/oop/6.友元函数"
-                },
-                {
-                  "text": "内联函数",
-                  "link": "/contents/notes/languages/cpp/oop/7.内联函数"
+                  "link": "/contents/notes/languages/cpp/oop/06_拷贝构造函数"
                 },
                 {
                   "text": "this指针",
-                  "link": "/contents/notes/languages/cpp/oop/8.this指针"
+                  "link": "/contents/notes/languages/cpp/oop/07_this指针"
                 },
                 {
                   "text": "指向类的指针",
-                  "link": "/contents/notes/languages/cpp/oop/9.指向类的指针"
-                },
-                {
-                  "text": "类的三大核心特性",
-                  "link": "/contents/notes/languages/cpp/oop/多态"
-                },
-                {
-                  "text": "类的三大核心特性",
-                  "link": "/contents/notes/languages/cpp/oop/封装"
+                  "link": "/contents/notes/languages/cpp/oop/08_指向类的指针"
                 },
                 {
                   "text": "函数重载",
-                  "link": "/contents/notes/languages/cpp/oop/函数重载"
-                },
-                {
-                  "text": "类的三大核心特性",
-                  "link": "/contents/notes/languages/cpp/oop/继承"
+                  "link": "/contents/notes/languages/cpp/oop/09_函数重载"
                 },
                 {
                   "text": "运算符重载",
-                  "link": "/contents/notes/languages/cpp/oop/运算符重载"
+                  "link": "/contents/notes/languages/cpp/oop/10_运算符重载"
+                },
+                {
+                  "text": "友元函数",
+                  "link": "/contents/notes/languages/cpp/oop/11_友元函数"
+                },
+                {
+                  "text": "内联函数",
+                  "link": "/contents/notes/languages/cpp/oop/12_内联函数"
+                },
+                {
+                  "text": "类的三大核心特性",
+                  "link": "/contents/notes/languages/cpp/oop/13_继承"
+                },
+                {
+                  "text": "类的三大核心特性",
+                  "link": "/contents/notes/languages/cpp/oop/14_多态"
                 }
               ]
             },
@@ -680,33 +688,25 @@
               "items": [
                 {
                   "text": "vector",
-                  "link": "/contents/notes/languages/cpp/stl/1.vector"
-                },
-                {
-                  "text": "list",
-                  "link": "/contents/notes/languages/cpp/stl/2.list"
+                  "link": "/contents/notes/languages/cpp/stl/01_vector"
                 },
                 {
                   "text": "string",
-                  "link": "/contents/notes/languages/cpp/stl/2.string"
+                  "link": "/contents/notes/languages/cpp/stl/02_string"
+                },
+                {
+                  "text": "list",
+                  "link": "/contents/notes/languages/cpp/stl/03_list"
                 },
                 {
                   "text": "迭代器",
-                  "link": "/contents/notes/languages/cpp/stl/迭代器"
+                  "link": "/contents/notes/languages/cpp/stl/04_迭代器"
                 },
                 {
                   "text": "迭代器常用内容",
-                  "link": "/contents/notes/languages/cpp/stl/迭代器部分常用"
+                  "link": "/contents/notes/languages/cpp/stl/05_迭代器部分常用"
                 }
               ]
-            },
-            {
-              "text": "从 C 转向 C++",
-              "link": "/contents/notes/languages/cpp/从 C 转向 Cpp"
-            },
-            {
-              "text": "C++目录",
-              "link": "/contents/notes/languages/cpp/C++目录"
             }
           ]
         },
@@ -715,66 +715,66 @@
           "collapsed": true,
           "items": [
             {
+              "text": "本笔记记录的内容",
+              "link": "/contents/notes/languages/python/00_前言"
+            },
+            {
               "text": "数据容器",
               "collapsed": true,
               "items": [
                 {
                   "text": "列表",
-                  "link": "/contents/notes/languages/python/2_数据容器/01_list"
+                  "link": "/contents/notes/languages/python/数据容器/01_list"
                 },
                 {
                   "text": "str - 字符串",
-                  "link": "/contents/notes/languages/python/2_数据容器/02_str"
+                  "link": "/contents/notes/languages/python/数据容器/02_str"
                 },
                 {
                   "text": "tuple - 元组",
-                  "link": "/contents/notes/languages/python/2_数据容器/03_tuple"
+                  "link": "/contents/notes/languages/python/数据容器/03_tuple"
                 },
                 {
                   "text": "set - 集合",
-                  "link": "/contents/notes/languages/python/2_数据容器/04_set"
+                  "link": "/contents/notes/languages/python/数据容器/04_set"
                 },
                 {
                   "text": "dict（字典）",
-                  "link": "/contents/notes/languages/python/2_数据容器/05_dict"
+                  "link": "/contents/notes/languages/python/数据容器/05_dict"
                 },
                 {
                   "text": "总结",
-                  "link": "/contents/notes/languages/python/2_数据容器/06_总结"
+                  "link": "/contents/notes/languages/python/数据容器/06_总结"
                 }
               ]
             },
             {
               "text": "函数",
-              "link": "/contents/notes/languages/python/03_函数"
+              "link": "/contents/notes/languages/python/01_函数"
             },
             {
               "text": "类型提示",
-              "link": "/contents/notes/languages/python/04_类型提示"
+              "link": "/contents/notes/languages/python/02_类型提示"
             },
             {
               "text": "模块",
-              "link": "/contents/notes/languages/python/05_模块"
+              "link": "/contents/notes/languages/python/03_模块"
             },
             {
               "text": "面向对象",
-              "link": "/contents/notes/languages/python/06_面向对象"
+              "link": "/contents/notes/languages/python/04_面向对象"
             },
             {
               "text": "异常",
-              "link": "/contents/notes/languages/python/07_异常"
+              "link": "/contents/notes/languages/python/05_异常"
             },
             {
               "text": "python - 文件操作",
-              "link": "/contents/notes/languages/python/08_文件操作"
+              "link": "/contents/notes/languages/python/06_文件操作"
             },
             {
               "text": "Python 类方法与资源管理",
-              "link": "/contents/notes/languages/python/09_类方法与资源管理"
-            },
-            {
-              "text": "本笔记记录的内容",
-              "link": "/contents/notes/languages/python/前言"
+              "link": "/contents/notes/languages/python/07_类方法与资源管理"
             }
           ]
         }
@@ -808,39 +808,39 @@
           "items": [
             {
               "text": "层叠、优先级与继承",
-              "link": "/contents/notes/web/css/1.层叠、优先级与继承"
+              "link": "/contents/notes/web/css/01_层叠、优先级与继承"
             },
             {
               "text": "选择器简述",
-              "link": "/contents/notes/web/css/2.选择器简述"
+              "link": "/contents/notes/web/css/02_选择器简述"
             },
             {
               "text": "属性选择器",
-              "link": "/contents/notes/web/css/3.属性选择器"
+              "link": "/contents/notes/web/css/03_属性选择器"
             },
             {
               "text": "伪类和伪元素",
-              "link": "/contents/notes/web/css/4.伪类和伪元素"
+              "link": "/contents/notes/web/css/04_伪类和伪元素"
             },
             {
               "text": "关系选择器",
-              "link": "/contents/notes/web/css/5.关系选择器"
+              "link": "/contents/notes/web/css/05_关系选择器"
             },
             {
               "text": "盒模型",
-              "link": "/contents/notes/web/css/6.盒模型"
+              "link": "/contents/notes/web/css/06_盒模型"
             },
             {
               "text": "边框",
-              "link": "/contents/notes/web/css/7.边框"
+              "link": "/contents/notes/web/css/07_边框"
             },
             {
               "text": "基本文本和字体样式",
-              "link": "/contents/notes/web/css/8.基本文本和字体样式"
+              "link": "/contents/notes/web/css/08_基本文本和字体样式"
             },
             {
               "text": "CSS 布局与响应式",
-              "link": "/contents/notes/web/css/9.布局与响应式"
+              "link": "/contents/notes/web/css/09_布局与响应式"
             }
           ]
         },
@@ -849,20 +849,20 @@
           "collapsed": true,
           "items": [
             {
-              "text": "1.HTML 基础",
-              "link": "/contents/notes/web/fundamentals/1.HTML入门"
+              "text": "HTML 基础",
+              "link": "/contents/notes/web/fundamentals/01_HTML入门"
             },
             {
               "text": "CSS 基础",
-              "link": "/contents/notes/web/fundamentals/2.CSS入门"
+              "link": "/contents/notes/web/fundamentals/02_CSS入门"
             },
             {
               "text": "JavaScript 入门",
-              "link": "/contents/notes/web/fundamentals/3.JS入门"
+              "link": "/contents/notes/web/fundamentals/03_JS入门"
             },
             {
               "text": "原生前端请求与交互",
-              "link": "/contents/notes/web/fundamentals/4.原生前端请求与交互"
+              "link": "/contents/notes/web/fundamentals/04_原生前端请求与交互"
             }
           ]
         },
@@ -918,7 +918,7 @@
           "items": [
             {
               "text": "快速入门",
-              "link": "/contents/notes/web/react/1.快速入门"
+              "link": "/contents/notes/web/react/01_快速入门"
             }
           ]
         }

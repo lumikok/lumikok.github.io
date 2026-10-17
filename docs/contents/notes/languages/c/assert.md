@@ -1,6 +1,16 @@
-# assert
+---
+title: 页面已迁移
+sidebar: false
+search: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/contents/notes/languages/c/03_assert"
+  - - link
+    - rel: canonical
+      href: "/contents/notes/languages/c/03_assert"
+---
 
-`assert`函数是一个用于调试的宏，包含在C`<assert.h>`头文件中。用于检查程序中的假设条件是否为真。如果条件为假，`assert`会打印一条错误消息并终止程序执行。
+# 页面已迁移
 
-## 禁用断言
-
+[前往当前笔记](/contents/notes/languages/c/03_assert)

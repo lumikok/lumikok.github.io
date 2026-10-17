@@ -1,11 +1,16 @@
 ---
-startdate: 2026-05-14
-tags:
-  - Cpp
+title: 页面已迁移
+sidebar: false
+search: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/contents/notes/languages/cpp/00_C++%E7%9B%AE%E5%BD%95"
+  - - link
+    - rel: canonical
+      href: "/contents/notes/languages/cpp/00_C++%E7%9B%AE%E5%BD%95"
 ---
-# C++目录
 
-> 前置笔记：[从 C 转向 C++](从%20C%20转向%20Cpp.md)；
+# 页面已迁移
 
-## 第一部分：类与对象
-
+[前往当前笔记](/contents/notes/languages/cpp/00_C++%E7%9B%AE%E5%BD%95)

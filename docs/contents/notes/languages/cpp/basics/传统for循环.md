@@ -1,9 +1,16 @@
-# 传统for循环
+---
+title: 页面已迁移
+sidebar: false
+search: false
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/contents/notes/languages/cpp/basics/02_%E4%BC%A0%E7%BB%9Ffor%E5%BE%AA%E7%8E%AF"
+  - - link
+    - rel: canonical
+      href: "/contents/notes/languages/cpp/basics/02_%E4%BC%A0%E7%BB%9Ffor%E5%BE%AA%E7%8E%AF"
+---
 
-传统for循环其实就是平时用的**下标遍历**。
+# 页面已迁移
 
-**优点或者技巧**：
-
-- 可以精确控制索引，可用于**滑动窗口、双指针**等算法。
-- 可以**倒序遍历**，比如从后往前删除元素等操作。
-- 可以**跳着遍历**，比如每隔一个元素处理一次等操作。
+[前往当前笔记](/contents/notes/languages/cpp/basics/02_%E4%BC%A0%E7%BB%9Ffor%E5%BE%AA%E7%8E%AF)
