@@ -430,6 +430,10 @@
             {
               "text": "回溯算法",
               "link": "/contents/notes/algorithms/techniques/02_回溯算法"
+            },
+            {
+              "text": "状态与转移",
+              "link": "/contents/notes/algorithms/techniques/03_状态与转移"
             }
           ]
         }
@@ -955,12 +959,20 @@
       "link": "/contents/problems/difference"
     },
     {
+      "text": "线性动态规划",
+      "link": "/contents/problems/dynamic-programming"
+    },
+    {
       "text": "哈希统计",
       "link": "/contents/problems/hash"
     },
     {
       "text": "队列",
       "link": "/contents/problems/queue"
+    },
+    {
+      "text": "状态模拟",
+      "link": "/contents/problems/simulation"
     },
     {
       "text": "滑动窗口",

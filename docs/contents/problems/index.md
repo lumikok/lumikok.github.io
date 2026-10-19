@@ -13,6 +13,8 @@ description: 按算法类型整理的练习题与解题思路
 - [排序](/contents/problems/sorting)
 - [滑动窗口](/contents/problems/sliding-window)
 - [差分](/contents/problems/difference)
+- [状态模拟](/contents/problems/simulation)
+- [线性动态规划](/contents/problems/dynamic-programming)
 - [哈希统计](/contents/problems/hash)
 - [栈](/contents/problems/stack)
 - [队列](/contents/problems/queue)
