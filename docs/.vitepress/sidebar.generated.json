@@ -116,6 +116,10 @@
             {
               "text": "欠拟合、过拟合与线性回归",
               "link": "/contents/notes/ai/machine-learning/02_欠拟合、过拟合与线性回归"
+            },
+            {
+              "text": "NumPy 数组与批量计算",
+              "link": "/contents/notes/ai/machine-learning/03_NumPy数组与批量计算"
             }
           ]
         }
