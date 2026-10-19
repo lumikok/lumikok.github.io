@@ -775,6 +775,10 @@
             {
               "text": "Python 类方法与资源管理",
               "link": "/contents/notes/languages/python/07_类方法与资源管理"
+            },
+            {
+              "text": "HTTP 请求与 JSON 数据转换",
+              "link": "/contents/notes/languages/python/08_HTTP请求与JSON数据转换"
             }
           ]
         }
