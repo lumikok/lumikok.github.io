@@ -12,6 +12,7 @@ description: 按算法类型整理的练习题与解题思路
 - [二分查找](/contents/problems/binary-search)
 - [排序](/contents/problems/sorting)
 - [滑动窗口](/contents/problems/sliding-window)
+- [差分](/contents/problems/difference)
 - [哈希统计](/contents/problems/hash)
 - [栈](/contents/problems/stack)
 - [队列](/contents/problems/queue)

@@ -943,6 +943,10 @@
       "link": "/contents/problems/dfs"
     },
     {
+      "text": "差分",
+      "link": "/contents/problems/difference"
+    },
+    {
       "text": "哈希统计",
       "link": "/contents/problems/hash"
     },
