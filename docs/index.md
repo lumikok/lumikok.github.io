@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: lumikok
-  text: 在学习，也在构建
+  text: 在学习，也在实践
   tagline: 一名计算机专业学生。这里记录我的知识、项目、思考与成长。
   image:
     src: /logo.jpg
@@ -18,21 +18,16 @@ hero:
     - theme: alt
       text: 成长足迹
       link: /contents/journey/
-
-features:
-  - title: 文章
-    details: 记录值得完整表达的阅读、思考、经验与复盘。
-    link: /contents/essays/
-  - title: 知识库
-    details: 按主题维护编程、算法、Web、AI 等学习笔记。
-    link: /contents/notes/
-  - title: 项目
-    details: 展示个人产品、学习项目、工具探索与学习实验。
-    link: /contents/projects/
-  - title: 足迹
-    details: 只保留阶段变化与重要节点，不把日常写成流水账。
-    link: /contents/journey/
 ---
+
+## 探索本站
+
+<nav class="editorial-index editorial-index--home" aria-label="主要内容">
+  <a class="editorial-entry" href="/contents/projects/"><span class="editorial-entry__index">01</span><span class="editorial-entry__body"><strong>项目</strong><small>从真实需求出发，记录个人产品、学习项目与技术实验。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
+  <a class="editorial-entry" href="/contents/notes/"><span class="editorial-entry__index">02</span><span class="editorial-entry__body"><strong>知识库</strong><small>按主题沉淀可持续查阅和复习的计算机知识。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
+  <a class="editorial-entry" href="/contents/essays/"><span class="editorial-entry__index">03</span><span class="editorial-entry__body"><strong>文章</strong><small>完整表达阅读感受、实践复盘与阶段思考。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
+  <a class="editorial-entry" href="/contents/journey/"><span class="editorial-entry__index">04</span><span class="editorial-entry__body"><strong>足迹</strong><small>记录重要的开始、完成、发布与方向变化。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
+</nav>
 
 ## 当前关注
 
