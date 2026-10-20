@@ -1056,6 +1056,10 @@
         {
           "text": "AI Learning Lab",
           "link": "/contents/projects/labs/ai-learning-lab"
+        },
+        {
+          "text": "Agent Engineering Lab",
+          "link": "/contents/projects/labs/agent-engineering-lab"
         }
       ],
       "link": "/contents/projects/labs/"

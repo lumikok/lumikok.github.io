@@ -27,7 +27,7 @@ features:
     details: 按主题维护编程、算法、Web、AI 等学习笔记。
     link: /contents/notes/
   - title: 项目
-    details: 展示个人产品、学习项目与技术探索。
+    details: 展示个人产品、学习项目、工具探索与学习实验。
     link: /contents/projects/
   - title: 足迹
     details: 只保留阶段变化与重要节点，不把日常写成流水账。
@@ -36,11 +36,11 @@ features:
 
 ## 当前关注
 
-- 维护个人知识库，整理算法、Web 与软件工程学习成果。
-- 继续巩固数据结构、算法与计算机基础。
-- 探索如何借助 AI 构建服务于个人需求的产品和学习工具。
+- 在 [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)中练习消息校验、HTTP 调用与错误处理，当前以本地回显服务做对照。
+- 在 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)中学习机器学习基础，连接训练评价、学习率实验与 NumPy 批量计算。
+- 通过算法练习巩固模拟、差分和基础动态规划，并把有复习价值的内容整理到[知识库](/contents/notes/)与[题解](/contents/problems/)。
 
-## 目前的项目
+## 项目精选
 
 <!-- AUTO-CONTENT:HOME-PROJECTS:START -->
 <div class="featured-links">
@@ -51,9 +51,11 @@ features:
 
 ## 最近的成长节点
 
-- **2026.09** — 完成拾光 `v0.4.0`，并进行跨电脑运行验收。
-- **2026.09** — 完成 FastAPI 记账本的分页、统计图表与单端口访问。
-- **2026.09** — 重构个人知识库的信息结构与发布检查流程。
+- **2026.10.19** — [AI 基础实验](/contents/projects/labs/ai-learning-lab)加入学习率对照和 NumPy 数组、取列与批量损失计算。
+- **2026.10.18** — [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)完成本地 HTTP 调用、等待超时与坏响应对照。
+- **2026.10.11** — 发布[极简番茄钟 `v0.2.0`](/contents/projects/personal/minimal-pomodoro)，提供透明浮窗、专注统计与 Windows 安装包。
+- **2026.10.10** — 完成 [Todo API](/contents/projects/learning/todo-app)的前后端迁移实践与项目收尾。
+- **2026.10.10** — 获全国大学生数学建模竞赛[省级二等奖](/contents/competitions/)。
 
 [查看完整成长足迹 →](/contents/journey/)
 

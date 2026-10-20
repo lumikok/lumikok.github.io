@@ -54,6 +54,7 @@ description: 按阶段记录重要的开始、完成与方向变化
 
 - 10 月 10 日获得全国大学生数学建模竞赛省级二等奖，见[竞赛记录](/contents/competitions/#高教社杯全国大学生数学建模竞赛)。
 - 完成 [Todo API](/contents/projects/learning/todo-app) 的数据库、接口测试与原生前端联调，10 月 10 日完成收尾。
-- 通过 vibe coding 制作[极简番茄钟 Minimal Pomodoro](/contents/projects/personal/minimal-pomodoro)，完成 `v0.2.0` 透明浮窗与专注统计版本，并提供 Windows 安装包。
-- 建立 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)，以训练与预测、过拟合对比和线性回归三个小实验推进 AI 基础学习，保存代码、对照结果与说明。
+- 通过 vibe coding 制作[极简番茄钟 Minimal Pomodoro](/contents/projects/personal/minimal-pomodoro)，10 月 11 日发布 `v0.2.0` 透明浮窗与专注统计版本，提供 Windows 安装包。
+- 建立 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)，从训练与评价、过拟合和线性回归起步；10 月 19 日加入学习率对照与 NumPy 基础计算，并统一依赖环境。
+- 开始 [Agent Engineering Lab](/contents/projects/labs/agent-engineering-lab)，10 月 18 日完成消息校验、本地 HTTP、等待超时与坏响应对照，当前仍使用回显服务。
 - 为[拾光 LearnTrace](/contents/projects/personal/learntrace)增加从应用备份导出只读快照的工具与接入文档，供其他本地项目读取学习数据；快照需要手动更新。

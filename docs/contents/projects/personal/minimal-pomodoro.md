@@ -26,7 +26,7 @@ order: 2
 
 ## 代表成果
 
-2026 年 10 月完成 `v0.2.0` 的透明浮窗与累计统计版本，提供 Windows x64 安装包。项目验收文档记录 Rust 22 项测试、Node 2 项时间格式测试和独立合成数据验收通过。
+2026 年 10 月 11 日发布 [`v0.2.0`](https://github.com/lumikok/minimal-pomodoro/releases/tag/v0.2.0) 的透明浮窗与累计统计版本，提供 Windows x64 安装包。项目验收文档记录 Rust 22 项测试、Node 2 项时间格式测试和独立合成数据验收通过。
 
 ## 开发方式
 
