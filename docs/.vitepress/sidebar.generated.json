@@ -787,6 +787,10 @@
             {
               "text": "HTTP 请求与 JSON 数据转换",
               "link": "/contents/notes/languages/python/08_HTTP请求与JSON数据转换"
+            },
+            {
+              "text": "错误分类与有限重试",
+              "link": "/contents/notes/languages/python/09_错误分类与有限重试"
             }
           ]
         }
