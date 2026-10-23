@@ -328,6 +328,10 @@
             {
               "text": "DFS",
               "link": "/contents/notes/algorithms/searching/06_DFS"
+            },
+            {
+              "text": "广度优先搜索",
+              "link": "/contents/notes/algorithms/searching/07_BFS"
             }
           ]
         },
