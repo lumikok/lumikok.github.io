@@ -120,6 +120,10 @@
             {
               "text": "NumPy 数组与批量计算",
               "link": "/contents/notes/ai/machine-learning/03_NumPy数组与批量计算"
+            },
+            {
+              "text": "多特征线性回归",
+              "link": "/contents/notes/ai/machine-learning/04_多特征线性回归"
             }
           ]
         }
@@ -298,6 +302,10 @@
             {
               "text": "高精度算法",
               "link": "/contents/notes/algorithms/math/高精度算法"
+            },
+            {
+              "text": "快速幂",
+              "link": "/contents/notes/algorithms/math/快速幂"
             }
           ]
         },
