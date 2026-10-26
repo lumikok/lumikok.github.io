@@ -2,7 +2,7 @@
 
 ## 数组与形状
 
-NumPy 数组适合批量数值计算。用 `np.array(...)` 创建数组，`dtype=float` 指定使用浮点数存储元素。
+用 `np.array(...)` 创建数组，`dtype=float` 指定使用浮点数存储元素。
 
 ```python
 import numpy as np
@@ -72,17 +72,12 @@ data2 = np.array([[101, 0, 2],
 x2 = data2[:, 1]
 y2 = data2[:, 2]
 predictions2 = 2 * x2 + 1
-residuals2 = predictions2 - y2
-J2 = np.mean(residuals2 ** 2) / 2
-
 print(predictions2)  # [1. 3. 5.]
-print(residuals2)    # [-1. -2. -3.]
-print(J2)            # 2.3333333333333335，即 7/3
 ```
 
 编号列不参与预测。`x2`、`y2`、预测值和残差的形状均为 `(3,)`。
 
-这里使用固定参数 `w = 2, b = 1`，并未训练参数来拟合这组数据；损失非零是正常结果，不代表取列或数组计算错误。
+这里仍使用固定参数，取列之后的残差与损失按前文公式计算即可。
 
 ## 数组梯度与训练
 
@@ -125,7 +120,7 @@ final_loss = cost_np(x, y, w_fit, b_fit)
 
 ### 与循环版对照
 
-保持数据、初始参数、学习率和步数相同，按“损失与梯度 → 一步更新 → 多步训练”的顺序比较，可以在最早出现差异的位置排查问题。
+**检查数组版结果是否有误**：保持数据、初始参数、学习率和步数相同，按“损失与梯度 → 一步更新 → 多步训练”的顺序比较，可以在最早出现差异的位置排查问题。
 
 原数据 `[(0, 1), (1, 3), (2, 5), (3, 7)]`，从 `(w, b) = (1, 1)` 开始，学习率为 `0.1`：
 
@@ -135,11 +130,12 @@ final_loss = cost_np(x, y, w_fit, b_fit)
 | 初始梯度 | `(-3.5, -1.5)` |
 | 一步后参数 | `(1.35, 1.15)` |
 | 1000 步后参数 | 约 `(2, 1)` |
-| 1000 步后损失 | 约 `1.58 × 10⁻²⁸` |
 
 梯度及一步、1000 步的参数在相对与绝对容差均为 `1e-10` 时一致。浮点计算可能产生微小差异，不应只用严格的 `==` 判断实现是否等价。
 
-更换为三条数据 `[(-2, 5), (0, 1), (1, -1)]`，从 `(0, 0)` 开始，以相同步长训练 1000 步，得到约 `w = -2, b = 1`，损失约 `1.51 × 10⁻³⁰`。输入、标签及残差的形状均为 `(3,)`；样本数变化后仍按实际 `m` 求平均。
+更换样本数时，输入、标签及残差仍应同形，损失和梯度按实际 `m` 求平均；完整换数据实验见文末源码。
+
+**向量化为何通常更快**：逐元素循环交给 NumPy 优化后的已编译代码执行，减少 Python 逐项循环与对象操作的开销。底层还可能使用 SIMD 或多线程等优化，但向量化本身不等于“并行计算”，也不保证任何规模下都更快。
 
 ## 广播与交叉残差
 
@@ -158,7 +154,7 @@ print(cross_errors)
 #  [-2. -1.]]
 ```
 
-正确的一一对应残差应只有两个：`[0., -1.]`，而不是四个。错误形状下仍可能算出一个损失值，所以**能运行不代表含义正确**；这个单变量实现应先确认 `x`、`y`、预测和残差都为 `(m,)`。
+正确的一一对应残差应只有两个：`[0., -1.]`，而不是四个。错误形状下仍可能算出一个损失值，所以**能运行不代表含义正确**；因此，在单变量实现中应先确认 `x`、`y`、预测和残差都为 `(m,)`。
 
 ## 多特征加权求和
 
@@ -184,6 +180,6 @@ print(pred_multi)  # [10.  5.  3.]
 
 这里 `(3, 2) @ (2,) → (3,)`。第一条样本的预测为 `2 × 4 + 3 × (-1) + 5 = 10`。`@` 对每行和权重求点积；`*` 只做逐元素乘法，不会自动把各特征的贡献求和。
 
-实验源码：AI 实验仓库中的 `Numpy/02-numpy_linear_regression.py`，提交 `2e7a198`。形状示意为用于说明广播机制的补充例子。
+实验源码：AI 实验仓库中的 `Numpy/02-numpy_linear_regression.py`。形状示意为用于说明广播机制的补充例子。
 
-参考：[NumPy 入门文档](https://numpy.org/doc/stable/user/absolute_beginners.html)、[一维数组点积](https://numpy.org/doc/stable/reference/generated/numpy.dot.html)与[广播规则](https://numpy.org/doc/stable/user/basics.broadcasting.html)。
+参考：[NumPy 入门文档](https://numpy.org/doc/stable/user/absolute_beginners.html)、[向量化与性能](https://numpy.org/doc/stable/user/whatisnumpy.html#why-is-numpy-fast)、[一维数组点积](https://numpy.org/doc/stable/reference/generated/numpy.dot.html)与[广播规则](https://numpy.org/doc/stable/user/basics.broadcasting.html)。

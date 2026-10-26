@@ -80,7 +80,7 @@ Mylib::print();    // 输出 MyLib::print
 
 #### 标准命名空间 std
 
-C++标准库的所有内容，都定义在 `std` 命名空间中，是最常使用的命名空间。
+C++ 标准库中的 `cout`、`string`、`vector` 等名称定义在 `std` 命名空间中，这是最常使用的命名空间。
 
 其使用方式如下：
 
@@ -116,7 +116,7 @@ cout << "Hello" << endl;
 ```cpp
 namespace Outer {
 	namespace Inner {
-		void func()
+		void func() {}
 	}
 }
 // 调用：Outer::Inner::func();
@@ -176,7 +176,7 @@ clog << "日志信息" << endl;
 
 这时，可以使用 `<iomanip>` 中的操纵符来实现。
 
-比如保留 n 位小数可以用 `setprecison(n)` 搭配 `fixed` 来实现：
+比如保留 n 位小数可以用 `setprecision(n)` 搭配 `fixed` 来实现：
 
 ```cpp
 #include <iomanip>
@@ -218,6 +218,22 @@ void swap(int &x,int &y) {
 - 误以为 `ref = b` 能改变引用的指向（实际是将 `b` 的值赋给被引用的变量）
 - 函数返回局部变量的引用（悬垂引用）
 
+### 引用作为返回值
+
+引用也可以作为返回值，但被引用对象必须在返回后继续存在。下面沿用原基础笔记中的例子，返回的是调用者传入的变量：
+
+```cpp
+int& getReference(int& ref) {
+    return ref;
+}
+
+// 在调用函数中使用：
+int a = 10;
+getReference(a) = 20; // a 变为 20
+```
+
+若只是读取大对象，可以用 `const T&` 传参，既避免复制，也限制通过该引用修改对象；引用并不意味着一定要修改原值。
+
 ### 指针 VS 引用
 
 此处，简单列出了二者区别：
@@ -236,7 +252,7 @@ void swap(int &x,int &y) {
 
 如果是 C 语言，是不是要写 `add_int()`、`add_double()` 等多个不同的函数名，管理起来十分麻烦。
 
-而 C++引入了**函数重载(overload)**，**允许函数名相同，参数列表不同**，调用时编辑器可根据参数个数和类型自动匹配，比如：
+而 C++引入了**函数重载(overload)**，**允许函数名相同，参数列表不同**，调用时编译器可根据参数个数和类型自动匹配，比如：
 
 - `add(int a,int b)`
 - `add(double a,double b)`
@@ -251,8 +267,7 @@ C++允许函数在声明或定义时给参数一个默认值。调用时若省�
 
 ```cpp
 int add_or_subtract(int a,int b,int c = 1) {
-	if(c==1) return a + b;
-	if(c==0) return a - b;
+	return c == 0 ? a - b : a + b; // 0 表示减法，其他值表示加法
 }
 
 cout << add_or_subtract(1,1); // 输出 2
@@ -268,15 +283,9 @@ cout << add_or_subtract(1,1,0); // 输出 0
 
 ### 内联函数（inline）
 
-C++用 `inline` 替代 C 语言的带参宏（`#define`）。`inline` 建议编译器将函数视为内联函数处理。
+简单计算可以优先写成函数，避免带参宏的文本替换问题；例如宏中的 `i++` 可能因参数展开而执行多次，函数参数则按函数调用规则求值。
 
-- **作用**：在编译时，将函数体直接嵌入调用处，省去函数调用的开销。
-- **适用场景**：代码短小，且频繁调用的函数。
-- **对比 C 宏**：宏只是文本替换，极易出错（无类型检查、参数有副作用如 `i++` 被执行两次）；内联函数本质还是函数，既有宏的效率，又安全。
-- **注意**：
-	- `inline` 只是对编译器的**建议**，编译器会根据内部代码开销和是否存在循环/递归，来自行选择。
-	- 滥用会导致代码膨胀（可执行文件变大）。
-- **补充**：C 中也有 `inline`（C 99），但 C++更常用。
+`inline` 提示编译器考虑内联展开，但**不保证把函数体嵌入调用处，也不保证更快**；未标记的函数也可能被内联。它还允许满足一致性规则的同一函数定义出现在多个翻译单元中，因此常用于头文件中的短函数定义。C99 也有 `inline`，其定义规则与 C++ 不完全相同。
 
 ## 动态内存管理
 
@@ -323,7 +332,7 @@ delete[] arr;
 
 ```cpp
 #include <vector>
-vector<int> arr = {1,2,3}      // 初始化
+vector<int> arr = {1,2,3};     // 初始化
 arr.push_back(4);              // 尾部添加
 cout << arr[0] << ", size = " << arr.size() << endl;
 ```
@@ -347,7 +356,8 @@ cout << s3 << endl;			// Hello World
 int len = s1.length();       // 或 size()
 if (s1 == s2) { };           // 直接比较
 s1[0] = 'h';                 // 索引访问（修改）
-s1.append(" C++");           // 追加```
+s1.append(" C++");           // 追加
+string part = s1.substr(1, 3); // 从下标 1 开始，最多取 3 个字符
 ```
 
 目前，只需把它理解成一个智能的字符数组，内部提供了很多简便用法（本质为类，涉及运算符重载）。
@@ -376,18 +386,18 @@ if(p == nullptr) { }
 
 C++ 推荐用 `const` 或 `constexpr` 替代 `#define` 宏。
 
-**为什么 C 语言总爱用 `#define`？**
-因为 C 语言的 `const` 只是“只读变量”，不是真正的常量：
+**先区分“只读”和“编译期常量”**。C 的 `const` 变量通常不属于整型常量表达式，因此不能据此定义要求编译期长度的数组：
 
 ```c
 const int SIZE = 10; 
-int arr[SIZE]; // ❌ C 语言报错！数组大小需要常量，SIZE 不算
+// 若写在文件作用域：
+// int arr[SIZE]; // 不能用 SIZE 作为编译期数组长度
 ```
 
-所以 C 只能被迫用 `#define SIZE 10`（文本替换，无类型，坑多）。
+若放在函数内部，支持变长数组（VLA）的 C 实现可能接受 `int arr[SIZE]`，所以不能笼统地说“C 一定报错”。需要整型常量表达式时，可以用 `enum { SIZE = 10 };` 或宏。
 
 **C++ 的解法**：
-C++ 强化了 `const`，只要初始值是常量，它就是编译期常量：
+C++ 中，下面用整型常量表达式初始化的 `const int` 可以用作数组长度；不能把这一结论推广为“所有 `const` 都是编译期常量”：
 
 ```cpp
 const int SIZE = 10;
@@ -395,7 +405,7 @@ int arr[SIZE]; // ✅ C++ 合法！
 ```
 
 **`constexpr`（C++11）：**  
-比 `const` 更严格，强制要求值必须在编译期算出来，语义更安全。
+用于变量时要求常量表达式初始化；`const` 变量则可以在运行时初始化。
 
 ```cpp
 constexpr double PI = 3.14; // 推荐！真正的常量
@@ -431,7 +441,7 @@ vector<int> v = {1,2,3};
 for (auto it = v.begin(); it != v.end(); ++it) { }
 ```
 
-> **注意**：`auto` 会去掉引用和 `const`，如需保留可用 `auto&` 或 `const auto&`。
+> **注意**：按值声明 `auto x = expression` 通常会去掉引用和顶层 `const`，如需引用可用 `auto&` 或 `const auto&`。指向对象的 `const` 不会因此消失，例如从 `const int*` 推导出的指针仍不能修改所指对象。
 > 迭代器此处了解即可。
 
 ## 范围 for 循环 (Range-based for)
@@ -469,3 +479,5 @@ C++ 提供更细粒度的类型转换操作符，比 C 的 `(type)value` 更�
 
 
 下一篇：*面向过程 VS 面向对象*（待整理）
+
+技术边界参考：[C++ 的 inline 规则](https://eel.is/c++draft/dcl.inline)、[GCC 对 C 变长数组的说明](https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Variable-Length.html)。

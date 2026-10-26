@@ -6,37 +6,51 @@ tags:
 ---
 # 深度优先搜索
 
-## B 3862 图的遍历
+## B3862 图的遍历
 
-- **来源**：洛谷 [B 3862](https://www.luogu.com.cn/problem/B3862)；
-- **标签**：DFS，图；
-- **核心思路**：
-
-> 邻接表存图，标记是否到过，保存每次的最大值。
-
-- **关键代码**：
+- **来源**：洛谷 [B3862 图的遍历（简单版）](https://www.luogu.com.cn/problem/B3862)，有向图，`n,m <= 1000`。
+- **核心思路**：对每个起点单独 DFS，求从它出发能到达的最大节点编号。`vis` 防止环和重复访问，`max_num` 累计本次搜索的最大编号；每次换起点都重新开始。
+- **关键代码**：以下整理自训练文件 `01_date/2026-05/B3862.cpp`，补齐原笔记遗漏的函数、读入与逐起点重置，保留原搜索方案。
 
 ```cpp
+#include <cstring>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int maxn = 1005;
 vector<int> graph[maxn];
 bool vis[maxn];
-int max_num = 0; 
+int max_num;
 
-// DFS函数核心
-vis[u] = true;
-
-if(u > max_num) max_num = u;
-
-for(int v : graph[u]) {
-    if(!vis[v]) dfs(v);
+void dfs(int u) {
+    vis[u] = true;
+    if (u > max_num) max_num = u;
+    for (int v : graph[u]) {
+        if (!vis[v]) dfs(v);
+    }
 }
 
-遍历每个点dfs即可
+int main() {
+    int n, m;
+    cin >> n >> m;
+    while (m--) {
+        int x, y;
+        cin >> x >> y;
+        graph[x].push_back(y); // 有向边，不能额外补反向边。
+    }
+    for (int i = 1; i <= n; ++i) {
+        memset(vis, false, sizeof(vis));
+        max_num = i;
+        dfs(i);
+        cout << max_num << ' ';
+    }
+    return 0;
+}
 ```
 
-- **注意点**：
-	- 判断大小是关键；
-	- 遍历每个点结束后，一定要在这里重置 `vis` 数组；
-	- `max_num` 初始化为当前节点；
+- **注意点**：本题允许从节点到达自身，因此孤立点的答案是自身编号；换起点前必须同时重置 `vis` 和 `max_num`，否则上一轮状态会影响下一轮。访问前先标记，才能在有向环中停止。
+- **复杂度**：单次搜索 O(n+m)，枚举全部起点为 O(n(n+m))；邻接表、访问标记与最深调用栈合计空间 O(n+m)。
 
 ## CF1676G：子树差值与答案计数
 

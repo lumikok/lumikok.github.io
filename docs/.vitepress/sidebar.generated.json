@@ -124,6 +124,10 @@
             {
               "text": "多特征线性回归",
               "link": "/contents/notes/ai/machine-learning/04_多特征线性回归"
+            },
+            {
+              "text": "逻辑回归",
+              "link": "/contents/notes/ai/machine-learning/05_逻辑回归"
             }
           ]
         }
@@ -619,10 +623,6 @@
               "collapsed": true,
               "items": [
                 {
-                  "text": "由C转向C++",
-                  "link": "/contents/notes/languages/cpp/basics/01_由C转向C++"
-                },
-                {
                   "text": "传统for循环",
                   "link": "/contents/notes/languages/cpp/basics/02_传统for循环"
                 },
@@ -1003,7 +1003,7 @@
       "link": "/contents/problems/stack"
     },
     {
-      "text": "模板",
+      "text": "题解模板",
       "link": "/contents/problems/template"
     },
     {
