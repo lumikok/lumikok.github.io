@@ -180,6 +180,6 @@ print(pred_multi)  # [10.  5.  3.]
 
 这里 `(3, 2) @ (2,) → (3,)`。第一条样本的预测为 `2 × 4 + 3 × (-1) + 5 = 10`。`@` 对每行和权重求点积；`*` 只做逐元素乘法，不会自动把各特征的贡献求和。
 
-实验源码：AI 实验仓库中的 `Numpy/02-numpy_linear_regression.py`。形状示意为用于说明广播机制的补充例子。
+实验源码：AI 实验仓库中的 `03-linear-regression/02-numpy_linear_regression.py`。形状示意为用于说明广播机制的补充例子。
 
 参考：[NumPy 入门文档](https://numpy.org/doc/stable/user/absolute_beginners.html)、[向量化与性能](https://numpy.org/doc/stable/user/whatisnumpy.html#why-is-numpy-fast)、[一维数组点积](https://numpy.org/doc/stable/reference/generated/numpy.dot.html)与[广播规则](https://numpy.org/doc/stable/user/basics.broadcasting.html)。
