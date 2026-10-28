@@ -31,9 +31,9 @@ hero:
 
 ## 当前关注
 
-- 在 [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)中练习消息校验、HTTP 调用与错误处理，当前以本地回显服务做对照。
-- 在 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)中学习机器学习基础，连接训练评价、学习率实验与 NumPy 批量计算。
-- 通过算法练习巩固模拟、差分和基础动态规划，并把有复习价值的内容整理到[知识库](/contents/notes/)与[题解](/contents/problems/)。
+- 在 [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)中练习真实模型调用、响应校验、错误分类与有限重试。
+- 在 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)中学习 NumPy 回归训练、逻辑回归与公开小数据分类，通过基线、错误分析和特征对照评价结果。
+- 通过算法练习巩固状态建模、搜索、动态规划与树遍历，并把有复习价值的内容整理到[知识库](/contents/notes/)与[题解](/contents/problems/)。
 
 ## 项目精选
 
@@ -46,8 +46,8 @@ hero:
 
 ## 最近的成长节点
 
-- **2026.10.19** — [AI 基础实验](/contents/projects/labs/ai-learning-lab)加入学习率对照和 NumPy 数组、取列与批量损失计算。
-- **2026.10.18** — [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)完成本地 HTTP 调用、等待超时与坏响应对照。
+- **2026.10.28** — [AI 基础实验](/contents/projects/labs/ai-learning-lab)在 Iris 数据上完成分类、简单基线、错误分析与多划分特征对照。
+- **2026.10.21** — [Agent 工程实验](/contents/projects/labs/agent-engineering-lab)在真实模型调用入口加入有限重试，并用受控错误序列检查停止与恢复行为。
 - **2026.10.11** — 发布[极简番茄钟 `v0.2.0`](/contents/projects/personal/minimal-pomodoro)，提供透明浮窗、专注统计与 Windows 安装包。
 - **2026.10.10** — 完成 [Todo API](/contents/projects/learning/todo-app)的前后端迁移实践与项目收尾。
 - **2026.10.10** — 获全国大学生数学建模竞赛[省级二等奖](/contents/competitions/)。
