@@ -290,6 +290,10 @@
                   "link": "/contents/notes/algorithms/data-structures/stack/栈"
                 }
               ]
+            },
+            {
+              "text": "有序集合与邻居查询",
+              "link": "/contents/notes/algorithms/data-structures/有序集合"
             }
           ]
         },
@@ -989,6 +993,10 @@
     {
       "text": "哈希统计",
       "link": "/contents/problems/hash"
+    },
+    {
+      "text": "有序集合",
+      "link": "/contents/problems/ordered-set"
     },
     {
       "text": "队列",
