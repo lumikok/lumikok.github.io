@@ -128,6 +128,10 @@
             {
               "text": "逻辑回归",
               "link": "/contents/notes/ai/machine-learning/05_逻辑回归"
+            },
+            {
+              "text": "错误分析与特征对照",
+              "link": "/contents/notes/ai/machine-learning/06_错误分析与特征对照"
             }
           ]
         }
@@ -803,6 +807,10 @@
             {
               "text": "错误分类与有限重试",
               "link": "/contents/notes/languages/python/09_错误分类与有限重试"
+            },
+            {
+              "text": "JSON 解析与业务校验",
+              "link": "/contents/notes/languages/python/10_JSON解析与业务校验"
             }
           ]
         }
