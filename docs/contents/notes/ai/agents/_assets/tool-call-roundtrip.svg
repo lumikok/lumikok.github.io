@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-labelledby="title desc">
+  <title id="title">工具调用的请求与结果回送</title>
+  <desc id="desc">时间从上向下。程序向模型提供问题与工具描述；模型返回调用请求；程序校验并调用本地工具，然后将带原调用编号的结果发回模型，最后得到回答。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#334155"/></marker></defs>
+  <rect width="900" height="440" rx="12" fill="#f8fafc"/>
+  <g font-family="Microsoft YaHei, sans-serif" fill="#172033" font-size="18" text-anchor="middle">
+    <rect x="45" y="20" width="180" height="50" rx="8" fill="#dbeafe"/><text x="135" y="52">程序（校验与编排）</text>
+    <rect x="360" y="20" width="180" height="50" rx="8" fill="#e0e7ff"/><text x="450" y="52">模型（提出请求）</text>
+    <rect x="675" y="20" width="180" height="50" rx="8" fill="#dcfce7"/><text x="765" y="52">本地只读工具</text>
+  </g>
+  <g stroke="#94a3b8" stroke-dasharray="5 5"><path d="M135 75V410"/><path d="M450 75V410"/><path d="M765 75V410"/></g>
+  <g fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"><path d="M135 115H450"/><path d="M450 175H135"/><path d="M135 235H765"/><path d="M765 290H135"/><path d="M135 345H450"/><path d="M450 400H135"/></g>
+  <g font-family="Microsoft YaHei, sans-serif" fill="#172033" font-size="17" text-anchor="middle">
+    <text x="292" y="103">问题 + 工具描述</text>
+    <text x="292" y="163">调用请求：名称、参数、ID</text>
+    <text x="450" y="223">程序先校验，再执行允许的查询</text>
+    <text x="450" y="278">返回查询结果或明确错误</text>
+    <text x="292" y="333">原请求 + 全部结果（对应 ID）</text>
+    <text x="292" y="388">最终回答（或继续请求工具）</text>
+  </g>
+</svg>

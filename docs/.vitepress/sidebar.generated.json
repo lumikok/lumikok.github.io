@@ -100,8 +100,12 @@
               "link": "/contents/notes/ai/agents/03_提示词工程"
             },
             {
-              "text": "琐记",
+              "text": "Agent 概念与设计原则",
               "link": "/contents/notes/ai/agents/04_琐记"
+            },
+            {
+              "text": "工具调用与有界循环",
+              "link": "/contents/notes/ai/agents/05_工具调用与有界循环"
             }
           ]
         },
