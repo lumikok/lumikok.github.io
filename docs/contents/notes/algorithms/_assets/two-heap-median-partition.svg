@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="270" viewBox="0 0 800 270" role="img" aria-labelledby="title desc">
+  <title id="title">双堆的数值分区与数量平衡</title>
+  <desc id="desc">五个数分为左侧较小半的一、二、二和右侧较大半的二、五。左侧用大根堆，右侧用小根堆，两个堆顶均为二，允许重复值。左侧三个元素比右侧两个多一个，因此左侧堆顶二是中位数。图表示分组，不表示堆内部存储顺序。</desc>
+  <style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#243247}.heading{font-size:18px;font-weight:600}.label{font-size:16px}.small{font-size:14px}.values{font-size:27px;font-weight:600}</style>
+  <rect width="800" height="270" rx="12" fill="#fff"/>
+  <text x="20" y="29" class="heading">奇数前缀：较小半多一个，左侧堆顶就是中位数</text>
+  <rect x="20" y="52" width="305" height="142" rx="10" fill="#edf4ff" stroke="#3973b9" stroke-width="1.5"/>
+  <rect x="475" y="52" width="305" height="142" rx="10" fill="#f1f3f6" stroke="#7a879a" stroke-width="1.5"/>
+  <text x="172" y="80" text-anchor="middle" class="label">较小半：大根堆 big</text>
+  <text x="627" y="80" text-anchor="middle" class="label">较大半：小根堆 small</text>
+  <text x="172" y="120" text-anchor="middle" class="values">{ 1, 2, 2 }</text>
+  <text x="627" y="120" text-anchor="middle" class="values">{ 2, 5 }</text>
+  <text x="172" y="151" text-anchor="middle" class="label">堆顶 2：左侧最大值</text>
+  <text x="627" y="151" text-anchor="middle" class="label">堆顶 2：右侧最小值</text>
+  <text x="172" y="177" text-anchor="middle" class="small">数量 3</text>
+  <text x="627" y="177" text-anchor="middle" class="small">数量 2</text>
+  <text x="400" y="139" text-anchor="middle" font-size="30">≤</text>
+  <text x="400" y="165" text-anchor="middle" class="small">允许相等</text>
+  <rect x="20" y="207" width="760" height="30" rx="6" fill="#fff0db"/>
+  <text x="400" y="228" text-anchor="middle" class="label">所有左值 ≤ 所有右值；5 = 3 + 2，所以中位数 = big.top() = 2</text>
+  <text x="400" y="258" text-anchor="middle" class="small">按数值分组示意，不代表堆内部从左到右有序</text>
+</svg>
