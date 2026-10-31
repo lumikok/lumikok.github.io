@@ -110,6 +110,16 @@
           ]
         },
         {
+          "text": "deep learning",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "神经网络前向与反向传播",
+              "link": "/contents/notes/ai/deep-learning/01_神经网络前向与反向传播"
+            }
+          ]
+        },
+        {
           "text": "机器学习",
           "collapsed": true,
           "items": [
