@@ -7,7 +7,7 @@
   ],
   "/contents/essays/": [
     {
-      "text": "文章",
+      "text": "博客",
       "link": "/contents/essays/"
     },
     {
@@ -19,7 +19,16 @@
     {
       "text": "思考",
       "collapsed": false,
-      "items": [],
+      "items": [
+        {
+          "text": "大一漫游 | 迷茫与探索交织的一年",
+          "link": "/contents/essays/thoughts/我的大一漫游"
+        },
+        {
+          "text": "小记录 | 节点记录",
+          "link": "/contents/essays/thoughts/成长记录"
+        }
+      ],
       "link": "/contents/essays/thoughts/"
     },
     {
@@ -38,34 +47,6 @@
     {
       "text": "学习日志",
       "link": "/contents/journal/"
-    },
-    {
-      "text": "2026",
-      "collapsed": false,
-      "items": [
-        {
-          "text": "今日学习笔记",
-          "link": "/contents/journal/2026/2026-07-10-qt"
-        },
-        {
-          "text": "今日学习笔记",
-          "link": "/contents/journal/2026/2026-07-11-qt"
-        }
-      ]
-    },
-    {
-      "text": "计划与复盘",
-      "collapsed": false,
-      "items": [
-        {
-          "text": "学期学习总结",
-          "link": "/contents/journal/plans/警告"
-        },
-        {
-          "text": "学习计划",
-          "link": "/contents/journal/plans/学习计划"
-        }
-      ]
     }
   ],
   "/contents/journey/": [
@@ -101,7 +82,7 @@
             },
             {
               "text": "Agent 概念与设计原则",
-              "link": "/contents/notes/ai/agents/04_琐记"
+              "link": "/contents/notes/ai/agents/04_Agent 概念与设计原则"
             },
             {
               "text": "工具调用与有界循环",

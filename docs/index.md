@@ -25,7 +25,7 @@ hero:
 <nav class="editorial-index editorial-index--home" aria-label="主要内容">
   <a class="editorial-entry" href="/contents/projects/"><span class="editorial-entry__index">01</span><span class="editorial-entry__body"><strong>项目</strong><small>从真实需求出发，记录个人产品、学习项目与技术实验。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
   <a class="editorial-entry" href="/contents/notes/"><span class="editorial-entry__index">02</span><span class="editorial-entry__body"><strong>知识库</strong><small>按主题沉淀可持续查阅和复习的计算机知识。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
-  <a class="editorial-entry" href="/contents/essays/"><span class="editorial-entry__index">03</span><span class="editorial-entry__body"><strong>文章</strong><small>完整表达阅读感受、实践复盘与阶段思考。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
+  <a class="editorial-entry" href="/contents/essays/"><span class="editorial-entry__index">03</span><span class="editorial-entry__body"><strong>博客</strong><small>记录阅读感受、实践复盘与日常随想。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
   <a class="editorial-entry" href="/contents/journey/"><span class="editorial-entry__index">04</span><span class="editorial-entry__body"><strong>足迹</strong><small>记录重要的开始、完成、发布与方向变化。</small></span><span class="editorial-entry__arrow" aria-hidden="true">↗</span></a>
 </nav>
 
@@ -54,10 +54,12 @@ hero:
 
 [查看完整成长足迹 →](/contents/journey/)
 
-## 最近文章
+## 最近博客
 
 <!-- AUTO-CONTENT:HOME-ESSAYS:START -->
 <div class="featured-links">
-  <a href="/contents/essays/reading/Teach%20Yourself%20Programming%20in%20Ten%20Years%20%E8%AF%BB%E5%90%8E%E6%84%9F"><span class="featured-links__index">01</span><span><strong>《Teach Yourself Programming in Ten Years》读后感</strong><small>阅读　关于长期实践、学习节奏和编程成长的思考。</small></span></a>
+  <a href="/contents/essays/thoughts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%B8%80%E6%BC%AB%E6%B8%B8"><span class="featured-links__index">01</span><span><strong>大一漫游 | 迷茫与探索交织的一年</strong><small>思考　回望大一的迷茫、尝试与学习经历，以及在探索中保留选择的想法。</small></span></a>
+  <a href="/contents/essays/thoughts/%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95"><span class="featured-links__index">02</span><span><strong>小记录 | 节点记录</strong><small>思考　按阶段记录学习与成长的重要节点，供日后回顾和调整。</small></span></a>
+  <a href="/contents/essays/reading/Teach%20Yourself%20Programming%20in%20Ten%20Years%20%E8%AF%BB%E5%90%8E%E6%84%9F"><span class="featured-links__index">03</span><span><strong>《Teach Yourself Programming in Ten Years》读后感</strong><small>阅读　关于长期实践、学习节奏和编程成长的思考。</small></span></a>
 </div>
 <!-- AUTO-CONTENT:HOME-ESSAYS:END -->

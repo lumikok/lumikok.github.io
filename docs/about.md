@@ -21,7 +21,7 @@ description: 关于 lumikok，以及这个网站为什么存在
 
 这个网站是我的公开学习档案，也是经过筛选后的个人知识空间：
 
-- [文章](/contents/essays/)用于完整表达阅读、思考、经验与复盘；
+- [博客](/contents/essays/)记录阅读、思考、日常感受与实践复盘；
 - [知识库](/contents/notes/)用于长期维护可查询的主题笔记；
 - [项目](/contents/projects/)记录个人产品、学习项目、工具探索与学习实验；
 - [竞赛](/contents/competitions/)记录实际参赛经历与已确认的成绩；

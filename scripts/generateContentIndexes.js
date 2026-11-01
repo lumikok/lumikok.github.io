@@ -257,7 +257,8 @@ export function generateContentIndexes() {
     if (replaceGeneratedBlock(category.indexPath, markers.category, categoryList(items))) changed.push(category.title);
   }
   for (const category of essayCategories) {
-    const items = essays.filter((item) => item.category.key === category.key);
+    const items = essays.filter((item) => item.category.key === category.key)
+      .sort((a, b) => Number(b.pinned === true) - Number(a.pinned === true) || essaySort(a, b));
     if (replaceGeneratedBlock(category.indexPath, markers.category, categoryList(items))) changed.push(category.title);
   }
 

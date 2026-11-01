@@ -28,6 +28,8 @@ export default defineConfig({
   title: "lumikok",
   description: "lumikok 的知识、项目、思考与成长记录",
   cleanUrls: true,
+  // Inbox 保存未分类、未成文的本地草稿，不生成公开页面。
+  srcExclude: ["contents/Inbox/**", "contents/inbox/**"],
   transformPageData(pageData) {
     const relativePath = pageData.relativePath.replace(/\\/g, "/");
     const isEssay =
@@ -155,7 +157,7 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
-      { text: "文章", link: "/contents/essays/" },
+      { text: "博客", link: "/contents/essays/" },
       { text: "知识库", link: "/contents/notes/" },
       { text: "项目", link: "/contents/projects/" },
       { text: "竞赛", link: "/contents/competitions/" },
