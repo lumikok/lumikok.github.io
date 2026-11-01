@@ -5,10 +5,12 @@ import {
   sidebarWatcherPlugin,
 } from "../../scripts/generateSidebar.js";
 import { generateContentIndexes } from "../../scripts/generateContentIndexes.js";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
 
-generateContentIndexes();
+const indexedContent = generateContentIndexes();
 const generatedSidebar = generateSidebar();
 
 // 导入评论系统
@@ -38,6 +40,14 @@ export default defineConfig({
       );
 
     // 只有真正的文章展示作者、阅读时间、赞赏与评论。
+    if (isEssay) {
+      const root = fileURLToPath(new URL("../../", import.meta.url));
+      pageData.frontmatter.publication = indexedContent.essays.find(
+        (essay) => essay.filePath === path.join(root, "docs", relativePath),
+      )?.publication;
+      // 日期由统一组件显示，避免主题把纯日期补成午夜。
+      pageData.frontmatter.date = false;
+    }
     if (!isEssay) {
       Object.assign(pageData.frontmatter, {
         author: false,
@@ -145,6 +155,13 @@ export default defineConfig({
     returnToTopLabel: "回到顶部",
     sidebarMenuLabel: "相关文章",
     lastUpdatedText: "上次更新于",
+    lastUpdated: {
+      formatOptions: {
+        timeZone: "Asia/Shanghai",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+      },
+    },
 
     // 设置logo
 

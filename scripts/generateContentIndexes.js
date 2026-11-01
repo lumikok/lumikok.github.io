@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolvePublicationDate } from "./publicationDate.js";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const docsRoot = path.join(projectRoot, "docs");
@@ -144,10 +145,9 @@ function validateProject(project) {
 }
 
 function validateEssay(essay) {
-  requireFields(essay, ["title", "description", "date"], "文章");
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(essay.date)) {
-    throw new Error(`文章 date 应为 YYYY-MM-DD：${path.relative(projectRoot, essay.filePath)}`);
-  }
+  requireFields(essay, ["title", "description"], "博客");
+  essay.publication = resolvePublicationDate(essay.filePath, essay.date, projectRoot);
+  essay.date = essay.publication.date;
 }
 
 function replaceGeneratedBlock(filePath, markerPair, content) {
@@ -169,7 +169,7 @@ function projectSort(a, b) {
 }
 
 function essaySort(a, b) {
-  return b.date.localeCompare(a.date) || a.title.localeCompare(b.title, "zh-CN");
+  return (b.publication.timestamp || b.date || "9999").localeCompare(a.publication.timestamp || a.date || "9999") || a.title.localeCompare(b.title, "zh-CN");
 }
 
 function formatProjectTime(project, year) {
@@ -192,7 +192,7 @@ function projectSummary(project) {
 function timeline(items, type) {
   const groups = new Map();
   for (const item of items) {
-    const year = (type === "project" ? item.start : item.date).slice(0, 4);
+    const year = type === "project" ? item.start.slice(0, 4) : item.date?.slice(0, 4) || "未发布";
     if (!groups.has(year)) groups.set(year, []);
     groups.get(year).push(item);
   }
@@ -203,7 +203,7 @@ function timeline(items, type) {
       `    <h2>${year}</h2>`,
       ...entries.map((item) => {
         const time =
-          type === "project" ? formatProjectTime(item, year) : item.date.slice(5).replace("-", ".");
+          type === "project" ? formatProjectTime(item, year) : item.date?.slice(5).replace("-", ".") || "未发布";
         const summary =
           type === "project"
             ? projectSummary(item)
