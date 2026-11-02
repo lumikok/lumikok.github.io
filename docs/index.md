@@ -58,8 +58,8 @@ hero:
 
 <!-- AUTO-CONTENT:HOME-ESSAYS:START -->
 <div class="featured-links">
-  <a href="/contents/essays/thoughts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%B8%80%E6%BC%AB%E6%B8%B8"><span class="featured-links__index">01</span><span><strong>大一漫游 | 迷茫与探索交织的一年</strong><small>思考　回望大一的迷茫、尝试与学习经历，以及在探索中保留选择的想法。</small></span></a>
-  <a href="/contents/essays/thoughts/%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95"><span class="featured-links__index">02</span><span><strong>小记录 | 节点记录</strong><small>思考　按阶段记录学习与成长的重要节点，供日后回顾和调整。</small></span></a>
-  <a href="/contents/essays/reading/Teach%20Yourself%20Programming%20in%20Ten%20Years%20%E8%AF%BB%E5%90%8E%E6%84%9F"><span class="featured-links__index">03</span><span><strong>《Teach Yourself Programming in Ten Years》读后感</strong><small>阅读　关于长期实践、学习节奏和编程成长的思考。</small></span></a>
+  <a href="/contents/essays/thoughts/%E5%AF%B9%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83"><span class="featured-links__index">01</span><span><strong>日常思考 | 寻我</strong><small>思考　对学习节奏、休息与记录的思考，以及为自己留下调整空间的尝试。</small></span></a>
+  <a href="/contents/essays/thoughts/%E6%88%91%E7%9A%84%E5%A4%A7%E4%B8%80%E6%BC%AB%E6%B8%B8"><span class="featured-links__index">02</span><span><strong>大一漫游 | 迷茫与探索交织的一年</strong><small>思考　回望大一的迷茫、尝试与学习经历，以及在探索中保留选择的想法。</small></span></a>
+  <a href="/contents/essays/thoughts/%E6%88%90%E9%95%BF%E8%AE%B0%E5%BD%95"><span class="featured-links__index">03</span><span><strong>小记录 | 节点记录</strong><small>思考　按阶段记录学习与成长的重要节点，供日后回顾和调整。</small></span></a>
 </div>
 <!-- AUTO-CONTENT:HOME-ESSAYS:END -->
