@@ -122,16 +122,9 @@ final_loss = cost_np(x, y, w_fit, b_fit)
 
 **检查数组版结果是否有误**：保持数据、初始参数、学习率和步数相同，按“损失与梯度 → 一步更新 → 多步训练”的顺序比较，可以在最早出现差异的位置排查问题。
 
-原数据 `[(0, 1), (1, 3), (2, 5), (3, 7)]`，从 `(w, b) = (1, 1)` 开始，学习率为 `0.1`：
+沿用前篇[一步更新](./02_欠拟合、过拟合与线性回归.md#一步更新)的四条样本，数组版应算出相同的损失、梯度和一步后参数，再检查多步训练结果。这样是在核对两种实现计算同一个问题，而不是用最终损失很低代替正确性检查。
 
-| 检查项 | 循环版与数组版结果 |
-| --- | --- |
-| 初始损失 | `1.75` |
-| 初始梯度 | `(-3.5, -1.5)` |
-| 一步后参数 | `(1.35, 1.15)` |
-| 1000 步后参数 | 约 `(2, 1)` |
-
-梯度及一步、1000 步的参数在相对与绝对容差均为 `1e-10` 时一致。浮点计算可能产生微小差异，不应只用严格的 `==` 判断实现是否等价。
+浮点计算可能产生微小差异，比较时使用合理的相对、绝对容差，例如 `np.allclose`，不应只用严格的 `==` 判断实现是否等价。实际对照及容差设置见文末源码。
 
 更换样本数时，输入、标签及残差仍应同形，损失和梯度按实际 `m` 求平均；完整换数据实验见文末源码。
 
@@ -180,6 +173,6 @@ print(pred_multi)  # [10.  5.  3.]
 
 这里 `(3, 2) @ (2,) → (3,)`。第一条样本的预测为 `2 × 4 + 3 × (-1) + 5 = 10`。`@` 对每行和权重求点积；`*` 只做逐元素乘法，不会自动把各特征的贡献求和。
 
-实验源码：AI 实验仓库中的 `03-linear-regression/02-numpy_linear_regression.py`。形状示意为用于说明广播机制的补充例子。
+实验源码：[NumPy 线性回归](https://github.com/lumikok/ai-learning-lab/blob/main/03-linear-regression/02-numpy_linear_regression.py)。形状示意为用于说明广播机制的补充例子。
 
 参考：[NumPy 入门文档](https://numpy.org/doc/stable/user/absolute_beginners.html)、[向量化与性能](https://numpy.org/doc/stable/user/whatisnumpy.html#why-is-numpy-fast)、[一维数组点积](https://numpy.org/doc/stable/reference/generated/numpy.dot.html)与[广播规则](https://numpy.org/doc/stable/user/basics.broadcasting.html)。
