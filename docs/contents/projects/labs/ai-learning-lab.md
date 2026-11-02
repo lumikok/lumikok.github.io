@@ -1,6 +1,6 @@
 ---
 title: AI Learning Lab
-description: 从 NumPy 回归训练到逻辑回归、Iris 分类与错误分析的机器学习基础实验。
+description: 用 NumPy 实现回归、Iris 分类和两层神经网络。
 start: 2026-10
 end: present
 status: ongoing
@@ -12,30 +12,23 @@ order: 1
 
 # AI Learning Lab
 
-这是学习 AI 基础时使用的实验仓库，从训练与评价起步，逐步加入 NumPy 回归训练、逻辑回归和公开数据分类，用代码与对照结果连接理论和实践。
+从参数枚举开始，现在有回归、Iris 分类和两层网络的 NumPy 实现。各单元保留代码、运行方法、结果和遇到的问题。
 
-## 已有实验
+## 仓库内容
 
-| 单元与代码入口 | 问题与已验证范围 |
+| 单元 | 内容 |
 | --- | --- |
-| [训练与预测](https://github.com/lumikok/ai-learning-lab/tree/main/01-train-and-predict) | 枚举参数并在独立数据上评价；对照训练数据与全体数据确定缩放规则的差异。 |
-| [过拟合与泛化](https://github.com/lumikok/ai-learning-lab/tree/main/02-overfitting) | 比较两个给定模型的训练与新数据误差，观察贴合训练数据不等于泛化更好。 |
-| [NumPy 基础](https://github.com/lumikok/ai-learning-lab/tree/main/Numpy) | 练习数组形状、取列、逐元素计算与批量损失，为后续数组训练准备数据表示。 |
-| [线性回归](https://github.com/lumikok/ai-learning-lab/tree/main/03-linear-regression) | 对照循环与 NumPy 的梯度和参数更新，扩展到多特征训练，并做学习率、删列和标准化实验。 |
-| [逻辑回归](https://github.com/lumikok/ai-learning-lab/tree/main/04-logistic-regression) | 实现概率预测、交叉熵、梯度训练与分类评价，检查阈值、决策边界及误报和漏报。 |
-| [Iris 二分类](https://github.com/lumikok/ai-learning-lab/tree/main/05-iris-classification) | 在公开数据上完成训练/验证划分、训练集统计量预处理、简单基线与错误分析，并比较四特征和花瓣两特征在四次划分下的表现。 |
+| [训练与预测](https://github.com/lumikok/ai-learning-lab/tree/main/01-train-and-predict) | 参数枚举、训练与测试分工、预处理信息泄漏。 |
+| [过拟合与泛化](https://github.com/lumikok/ai-learning-lab/tree/main/02-overfitting) | 对照给定模型在训练数据和新数据上的误差。 |
+| [NumPy 基础](https://github.com/lumikok/ai-learning-lab/tree/main/Numpy) | 数组形状、取列、逐元素计算。 |
+| [线性回归](https://github.com/lumikok/ai-learning-lab/tree/main/03-linear-regression) | 循环与数组梯度、多特征训练、学习率和标准化对照。 |
+| [逻辑回归](https://github.com/lumikok/ai-learning-lab/tree/main/04-logistic-regression) | 概率、交叉熵、梯度训练、阈值与决策边界。 |
+| [Iris 二分类](https://github.com/lumikok/ai-learning-lab/tree/main/05-iris-classification) | 训练与验证、简单基线、错分记录和特征对照。 |
+| [两层神经网络](https://github.com/lumikok/ai-learning-lab/tree/main/06-neural-network) | 前向、反向、数值梯度检查、短训练及 Iris 训练与验证。 |
 
-Iris 的种子 42 实验中，四特征模型验证错误率为 8%，多数类基线为 52%；四次划分对照中，四特征的验证交叉熵均更低，错误率三次持平、一次更低。验证集可能重叠，且没有独立最终测试集，结论仅限本次任务与设置。
+这些是小规模练习。两层网络在当前 Iris 设置下没有优于逻辑回归；单次划分和初始化不能说明模型的一般优劣。
 
-早期单元使用人为小数据，过拟合单元只评价给定模型；构造数据上的近零训练误差也不代表真实任务的泛化表现。
-
-## 实践方式
-
-学习中使用 AI 讲解、提示和调试反馈，实验数据、必要公式与函数接口有教学支持，关键代码由我编写。实验说明保留真实错误、结果与局限；这些是学习过程中的自编练习，不记作完成官方课程作业。
-
-训练与预测、过拟合及线性回归的循环版使用 Python 标准库，数组训练与逻辑回归使用 NumPy；Iris 实验用 scikit-learn 加载内置数据并划分样本，训练核心仍为 NumPy 实现。学习率、删列与标准化对照保留在线性回归单元中。
-
-仓库已统一使用 `pyproject.toml`、`uv.lock` 管理依赖，按[运行说明](https://github.com/lumikok/ai-learning-lab#运行方式)安装锁定环境后运行；同一概念的对照和变式优先放在原单元中。
+关键计算由我在 AI 讲解和提示下编写，环境配置、样板与部分整理有 AI 帮助。Iris 数据加载和划分使用 scikit-learn，训练核心仍是 NumPy 实现。完整结果与环境说明见仓库。
 
 ## 对应知识笔记
 
@@ -44,3 +37,4 @@ Iris 的种子 42 实验中，四特征模型验证错误率为 8%，多数类�
 - [NumPy 数组与批量计算](/contents/notes/ai/machine-learning/03_NumPy数组与批量计算)
 - [多特征线性回归](/contents/notes/ai/machine-learning/04_多特征线性回归)
 - [逻辑回归](/contents/notes/ai/machine-learning/05_逻辑回归)
+- [错误分析与特征对照](/contents/notes/ai/machine-learning/06_错误分析与特征对照)

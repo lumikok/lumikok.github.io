@@ -1,20 +1,17 @@
 ---
 title: 成长足迹
-description: 按阶段记录重要的开始、完成与方向变化
+description: 学习、项目和比赛中的重要节点
 ---
 
 # 成长足迹
 
-这里按阶段记录重要的学习、实践和方向变化。
+项目与代码见[项目页](/contents/projects/)，比赛成绩见[竞赛页](/contents/competitions/)。
 
-项目的功能与实现过程见[项目页](/contents/projects/)，比赛记录见[竞赛页](/contents/competitions/)。日常学习内容、刷题数量和时长保留在学习记录中。
-
-## 2025 · 探索与起步
+## 2025
 
 ### 10 月
 
-- 建立 CS 自学笔记仓库，开始公开整理 C 语言与计算机基础。
-- 并逐步学习 git 相关操作，学习仓库管理。
+- 建立 CS 自学笔记仓库，整理 C 语言与计算机基础，逐步学习 Git 和仓库管理。
 
 ### 11 月
 
@@ -25,7 +22,7 @@ description: 按阶段记录重要的开始、完成与方向变化
 
 - 在西南交通大学数学建模“新秀杯”暨创新团队选拔竞赛中获得二等奖，获奖日期为 12 月 9 日，见[竞赛记录](/contents/competitions/)。
 
-## 2026 · 探索、实践与提升
+## 2026
 
 ### 4—5 月
 
@@ -41,13 +38,13 @@ description: 按阶段记录重要的开始、完成与方向变化
 
 ### 7 月
 
-- 在学校实习中学习Qt 和工程工作流程。
+- 在学校实习中学习 Qt 和工程工作流程。
 - 继续整理 FastAPI 的依赖注入、异常处理、中间件与数据库知识。
 
 ### 9 月
 
 - 9 月 10 日—13 日参加[2026 高教社杯全国大学生数学建模竞赛](/contents/competitions/#高教社杯全国大学生数学建模竞赛)。
-- 重构个人知识库的信息结构、自动侧栏和发布检查流程。
+- 调整个人网站的结构，整理知识库。
 - 完成 [FastAPI 记账本](/contents/projects/learning/tally-book)的路由拆分、分页、统计图表和前后端单端口整合。
 - 创建 [Learning System](/contents/projects/experiments/learning-system)，尝试把主动学习、项目实践与复盘方法整理成一组 Codex Skills。
 - 通过 vibe coding 开发个人产品[拾光 LearnTrace](/contents/projects/personal/learntrace)，发布 `v0.4.0`，并完成 Windows 桌面打包与跨电脑运行验收。
@@ -55,8 +52,12 @@ description: 按阶段记录重要的开始、完成与方向变化
 ### 10 月
 
 - 10 月 10 日获得全国大学生数学建模竞赛省级二等奖，见[竞赛记录](/contents/competitions/#高教社杯全国大学生数学建模竞赛)。
-- 完成 [Todo API](/contents/projects/learning/todo-app) 的数据库、接口测试与原生前端联调，10 月 10 日完成收尾。
+- 10 月 10 日完成 [Todo API](/contents/projects/learning/todo-app)，把数据库、接口测试与原生页面接起来。
 - 通过 vibe coding 制作[极简番茄钟 Minimal Pomodoro](/contents/projects/personal/minimal-pomodoro)，10 月 11 日发布 `v0.2.0` 透明浮窗与专注统计版本，提供 Windows 安装包。
-- 建立 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)，从训练与评价扩展到 NumPy 多特征训练、特征缩放与逻辑回归；10 月 28 日在 Iris 数据上完成分类、基线、错误分析和多划分特征对照。
-- 开始 [Agent Engineering Lab](/contents/projects/labs/agent-engineering-lab)，从本地 HTTP 与校验实验推进到 10 月 20 日的真实 DeepSeek 调用，21 日加入有限重试与受控失败验证。
-- 为[拾光 LearnTrace](/contents/projects/personal/learntrace)增加从应用备份导出只读快照的工具与接入文档，供其他本地项目读取学习数据；快照需要手动更新。
+- 建立 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)，从回归和 Iris 分类，做到两层网络的前向、反向与短训练。
+- 在 [Agent Engineering Lab](/contents/projects/labs/agent-engineering-lab)接入真实模型、结构化结果和只读题库查询，保留校验、重试与轮数上限。
+- 为[拾光 LearnTrace](/contents/projects/personal/learntrace)补充只读数据导出，供其他本地项目读取。
+
+### 11 月
+
+- 2 日把两层网络用于 Iris 分类，在同一划分下与逻辑回归比较训练、验证和错误类型，见 [AI Learning Lab](/contents/projects/labs/ai-learning-lab)。
